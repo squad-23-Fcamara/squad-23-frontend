@@ -10,91 +10,24 @@
 </head>
 
 <body>
-  <aside class="header">
-    <div class="header-profile">
-      <div class="header-profile-image">
-        <img src="#" alt="Foto do perfil da conta">
-      </div>
-      <h1>Cristina Martins</h1>
-      <p> <a href="#">Editar perfil</a> </p>
-    </div>
-    <navbar class="nav">
-      <div class="nav-item">
-        <i class="nav-item-icon">i</i>
-        <a href="#">Página Inicial</a>
-      </div>
-      <div class="nav-item">
-        <i class="nav-item-icon">i</i>
-        <a href="#">Meus agendamentos</a>
-      </div>
-      <div class="nav-item">
-        <i class="nav-item-icon">i</i>
-        <a href="#">Conversas</a>
-      </div>
-      <div class="nav-item">
-        <i class="nav-item-icon">i</i>
-        <a href="#">Comunidade</a>
-      </div>
-      <div class="nav-item">
-        <i class="nav-item-icon">i</i>
-        <a href="#">Notificações</a>
-      </div>
-      <div class="nav-item">
-        <i class="nav-item-icon">i</i>
-        <a href="#">Salvos</a>
-      </div>
-    </navbar>
-  </aside>
-
   <main>
+    <header class="main-header">
+      <img src="#" alt="Foto de capa do mentor">
+    </header>
+    
     <section>
-
       <article class="about">
-        <div class="about-header">
-          <h2 class="about-title">Sobre mim</h2>
-          <h2 class="">Conteúdos</h2>
-        </div>
+        <h2 class="about-title">Sobre mim</h2>
         <p class="about-biografy">Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur
-          duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint
-          deserunt ut voluptate aute id deserunt nisi.</p>
-        <ul class="about-list">Habilidades</ul>
-        <li class="about-list-topic">HTML</li>
-        <li class="about-list-topic">JavaScript</li>
-        <li class="about-list-topic">React</li>
-        <li class="about-list-topic">Java</li>
-        <li class="about-list-topic">PHP</li>
-        <ul class="about-list">Interesses</ul>
-        <li class="about-list-topic">Node.js</li>
-        <li class="about-list-topic">Ruby</li>
-        <li class="about-list-topic">Scrum</li>
-      </article>
-
-      <article class="feedbacks">
-        <h2 class="feedbacks-title">Avaliações</h2>
-        <div class="feedbacks-card card-1">
-          <p class="feedbacks-card-description">Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui
-            esse pariatur duis deserunt mollit dolore cillum minim tempor enim.</p>
-          <a class="feedbacks-card-description-more" href="#"></a>
-          <img src="#" alt="Foto de perfil do avaliador">
-          <h3 class="feedbacks-card-name">Gustavo Gomes</h3>
-          <p class="feedbacks-card-job-role">Desenvolvedor</p>
-        </div>
-        <div class="feedbacks-card card-2">
-          <p class="feedbacks-card-description">Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui
-            esse pariatur duis deserunt mollit dolore cillum minim tempor enim.</p>
-          <a class="feedbacks-card-description-more" href="#"></a>
-          <img src="#" alt="Foto de perfil do avaliador">
-          <h3 class="feedbacks-card-name">Gustavo Gomes</h3>
-          <p class="feedbacks-card-job-role">Desenvolvedor</p>
-        </div>
-        <div class="feedbacks-card card-3">
-          <p class="feedbacks-card-description">Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui
-            esse pariatur duis deserunt mollit dolore cillum minim tempor enim.</p>
-          <a class="feedbacks-card-description-more" href="#"></a>
-          <img src="#" alt="Foto de perfil do avaliador">
-          <h3 class="feedbacks-card-name">Gustavo Gomes</h3>
-          <p class="feedbacks-card-job-role">Desenvolvedor</p>
-        </div>
+        duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint
+        deserunt ut voluptate aute id deserunt nisi.</p>
+        <ul class="skills-list-title">Habilidades</ul>
+        <li class="skills-list-topic">HTML</li>
+        <li class="skills-list-topic">JavaScript</li>
+        <li class="skills-list-topic">React</li>
+        <li class="skills-list-topic">Java</li>
+        <li class="skills-list-topic">PHP</li>
+        <li class="skills-list-topic">C#</li>
       </article>
 
       <article class="mentor-profile">
@@ -116,31 +49,54 @@
       </ul>
 
       <article class="schedule">
-        <p class="schedule-available-title">Dias disponíveis</p>
-        <div class="schedule-available-days-option">
-          <p>Seg</p>
-          <p>20 Abril</p>
-          <p>10 vagas</p>
-        </div>
-        <div class="schedule-available-days-option">
-          <p>Ter</p>
-          <p>21 Abril</p>
-          <p>15 vagas</p>
-        </div>
-        <div class="schedule-available-days-option">
-          <p>Qua</p>
-          <p>22 Abril</p>
-          <p>5 vagas</p>
-        </div>
-
-        <p class="schedule-available-title">Horários disponíveis</p>
-        <p class="schedule-available-time-option">9:00</p>
-        <p class="schedule-available-time-option">11:00</p>
-        <p class="schedule-available-time-option">14:00</p>
-        <p class="schedule-available-time-option">16:00</p>
-        <p class="schedule-available-time-option">18:00</p>
-        <p class="schedule-available-time-option">20:00</p>
-        <button class="schedule-btn">Agendar mentoria</button>
+        <table>
+          <th>
+            <div>
+              <h3>Segunda</h3>
+              <h4>20 Abr</h4>
+            </div>
+          </th>
+          <th>
+            <div>
+              <h3>Terça</h3>
+              <h4>21 Abr</h4>
+            </div>
+          </th>
+          <th>
+            <div>
+              <h3>Quarta</h3>
+              <h4>22 Abr</h4>
+            </div>
+          </th>
+          <th>
+            <div>
+              <h3>Quinta</h3>
+              <h4>23 Abr</h4>
+            </div>
+          </th>
+          <th>
+            <div>
+              <h3>Sexta</h3>
+              <h4>24 Abr</h4>
+            </div>
+          </th>
+          <th>
+            <div>
+              <h3>Sábado</h3>
+              <h4>25 Abr</h4>
+            </div>
+          </th>
+          <th>
+            <div>
+              <h3>Domingo</h3>
+              <h4>26 Abr</h4>
+            </div>
+          </th>
+          <tr> <!--linha-->
+            <td>8:00</td> <!--coluna-->
+            <td>9:00</td>
+          </tr>
+        </table>
       </article>
 
     </section>
