@@ -1,5 +1,7 @@
 // -- FILTER FOR MENTORS (for each character while writing) -- 
 
+//criação de form e evento submit 
+
 const inputSearch = document.querySelector('');
 
 inputSearch.addEventListener('input', event => {
