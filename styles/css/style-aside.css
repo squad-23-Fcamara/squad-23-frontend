@@ -1,8 +1,12 @@
 .menu {
+  display: block;
   background-color: #ccc;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.menu #nav-btn {
+  display: none;
 }
 .menu .profile {
   width: 100%;
@@ -10,6 +14,7 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .menu .profile img {
   border-radius: 50%;
@@ -31,6 +36,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+}
+.menu .nav a {
+  display: block;
+  padding: 0.5rem;
+  background-color: #eee;
 }
 .menu .nav-item {
   text-align: center;
