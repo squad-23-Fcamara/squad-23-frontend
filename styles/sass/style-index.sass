@@ -3,15 +3,12 @@
 .grid-main
     display: grid
 
-    grid-template-columns: 23vw 73vw
+    grid-template-columns: 15.3vw 82vw
     grid-template-rows: 19.5vh 78vh
-    grid-gap: 2.3vh 1vw
+    grid-gap: 2vh 2vw
 
     .menu
-        border: 1px solid black
         background-color: #ccc
-
-        
 
         grid-column: 1 / 2
         grid-row: 1 /3
@@ -31,15 +28,20 @@
         display: flex
 
         .mentors
-            width: 90%
-            height: 90%
-            
-
+            width: 100%
+            height: auto
+             
             display: flex
+            flex-wrap: wrap
+
+            &-header
+                border: 1px solid black
+                width: 100%
+                height: 3rem
 
 
-            .mentors-card
-                @include mixins.card 
+
+                
 
             
 

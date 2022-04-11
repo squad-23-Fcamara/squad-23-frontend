@@ -1,11 +1,10 @@
 .grid-main {
   display: grid;
-  grid-template-columns: 23vw 73vw;
+  grid-template-columns: 15.3vw 82vw;
   grid-template-rows: 19.5vh 78vh;
-  grid-gap: 2.3vh 1vw;
+  grid-gap: 2vh 2vw;
 }
 .grid-main .menu {
-  border: 1px solid black;
   background-color: #ccc;
   grid-column: 1/2;
   grid-row: 1/3;
@@ -22,16 +21,15 @@
   display: flex;
 }
 .grid-main .main .mentors {
-  width: 90%;
-  height: 90%;
-  border: 1px solid green;
-  background-color: blue;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
 }
-.grid-main .main .mentors .mentors-card {
-  width: 342;
-  height: 437;
+.grid-main .main .mentors-header {
   border: 1px solid black;
-  background-color: #ccc;
+  width: 100%;
+  height: 3rem;
 }
 
 /*# sourceMappingURL=style-index.css.map */
