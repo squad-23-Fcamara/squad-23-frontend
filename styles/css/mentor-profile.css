@@ -1,0 +1,10 @@
+.mentor-profile-name {
+  font-size: 1rem;
+}
+@media (min-width: 920px) {
+  .mentor-profile-name {
+    color: blue;
+  }
+}
+
+/*# sourceMappingURL=mentor-profile.css.map */
