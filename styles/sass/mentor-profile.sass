@@ -1,10 +1,28 @@
 @use 'responsive-mixin'
 
-.mentor-profile-name
-   font-size: 1rem
-   @include responsive-mixin.desktop
-      color: blue
+.main-header
+   .cover-image
+      display: none
+      @include responsive-mixin.desktop
+         display: inline
 
+.mentor-profile
+   &-image
+      width: 50%
+      max-width: 15rem
+      max-height: auto
+      display: flex
+      justify-content: center
+      align-items: center
+      margin: 0 auto
+      border-radius: 50%
 
+   &-image img
+      border-radius: 50%
+      width: 70%
+      height: 70%
+      margin: 2rem
 
-
+   &-main-div
+      padding: 1.6rem
+      text-align: center
