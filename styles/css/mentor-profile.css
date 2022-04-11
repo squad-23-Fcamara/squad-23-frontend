@@ -1,3 +1,7 @@
+body {
+  margin: 1.6rem;
+}
+
 .main-header .cover-image {
   display: none;
 }
@@ -7,6 +11,11 @@
   }
 }
 
+.mentor-profile {
+  background-color: yellow;
+  padding: 7.7rem 3.8rem 4.2rem 3.8rem;
+  border-radius: 1rem;
+}
 .mentor-profile-image {
   width: 50%;
   max-width: 15rem;
@@ -23,9 +32,22 @@
   height: 70%;
   margin: 2rem;
 }
-.mentor-profile-main-div {
-  padding: 1.6rem;
-  text-align: center;
+.mentor-profile-job-role {
+  padding-bottom: 1rem;
+}
+.mentor-profile-qualification {
+  padding: 2rem 0;
+}
+.mentor-profile-social-media {
+  padding-top: 2rem;
+}
+
+.schedule-button {
+  padding: 1.35rem 1.65rem;
+  width: 20.2rem;
+  border-radius: 1rem;
+  margin-top: 6.2rem;
+  margin-bottom: 6.5rem;
 }
 
 /*# sourceMappingURL=mentor-profile.css.map */
