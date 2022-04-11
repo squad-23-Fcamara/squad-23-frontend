@@ -1,12 +1,52 @@
 @use 'mixins'
 @use 'responsive-mixin'
 
+/* MOBILE */
+.grid-main 
+    padding: 0 16px
 
+    .research
+        border: 1px solid blue
+        width: 100%
+        height: 11rem
 
-// DESKTOP
-.grid-main
-    @include responsive-mixin.desktop
     
+    .menu
+        border: 1px solid green
+
+        position: absolute
+        top: 0
+
+
+
+    .main
+        border: 2px solid yellow
+        width: 100%
+        height: auto
+
+
+    
+        .mentors
+            width: 100%
+            height: auto
+            border: 1px solid orange
+
+
+
+            &-card
+                border: 1px solid black 
+                max-width: 250px
+                width: 100%
+
+
+
+
+
+
+        //DESKTOP
+    @include responsive-mixin.desktop
+        padding: 0
+        
         display: grid
 
         grid-template-columns: 15.3vw 82vw
