@@ -89,11 +89,16 @@ body {
   font-weight: 700;
   margin-top: 3.2rem;
 }
-.schedule-title-table {
-  background-color: #585858;
-  color: white;
-  margin-top: 1.2rem;
+.schedule-table {
   padding: 0.8rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.4);
+  margin: 0 auto;
+}
+.schedule-table .schedule-day {
+  padding: 0.5rem 2rem;
+}
+.schedule-table .schedule-time {
+  border: 0.1rem solid rgba(0, 0, 0, 0.4);
 }
 
 /*# sourceMappingURL=mentor-profile.css.map */
