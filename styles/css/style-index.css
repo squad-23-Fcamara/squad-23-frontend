@@ -1,38 +1,76 @@
 /* MOBILE */
+body {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .grid-main {
-  padding: 0 16px;
+  width: 100%;
 }
 .grid-main .research {
   border: 1px solid blue;
   width: 100%;
   height: 11rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.grid-main .research-search {
+  width: 100%;
 }
 .grid-main .menu {
-  border: 1px solid green;
   position: absolute;
   top: 0;
 }
 .grid-main .main {
-  border: 2px solid yellow;
+  border: 1px solid green;
   width: 100%;
   height: auto;
 }
 .grid-main .main .mentors {
-  width: 100%;
   height: auto;
-  border: 1px solid orange;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 }
 .grid-main .main .mentors-card {
   border: 1px solid black;
-  max-width: 250px;
   width: 100%;
+  max-width: 350px;
+  height: 440px;
+  padding: 16px;
+  border-radius: 0.6rem;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+}
+.grid-main .main .mentors-card-img {
+  width: 100%;
+  height: 14.3rem;
+  border: 1px solid red;
+  border-radius: 0.6rem 0.6rem 0 0;
+  background-image: url("/assets/img/perfil mulher.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 24rem;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.grid-main .main .mentors-card-description {
+  border: 1px solid green;
+  width: 100%;
+  height: auto;
+}
+.grid-main .main .mentors-card-description-specialty {
+  display: flex;
 }
 @media (min-width: 920px) {
   .grid-main {
     padding: 0;
     display: grid;
     grid-template-columns: 15.3vw 82vw;
-    grid-template-rows: 19.5vh 78vh;
+    grid-template-rows: 19.5vh auto;
     grid-gap: 2vh 2vw;
   }
   .grid-main .menu {
@@ -46,19 +84,19 @@
   }
   .grid-main .main {
     border: 1px solid red;
+    height: auto;
     grid-column: 2/3;
     grid-row: 2/3;
     display: flex;
+    flex-direction: row;
   }
   .grid-main .main .mentors {
-    width: 100%;
     height: auto;
     display: flex;
     flex-wrap: wrap;
   }
   .grid-main .main .mentors-header {
     border: 1px solid black;
-    width: 100%;
     height: 3rem;
   }
 }
