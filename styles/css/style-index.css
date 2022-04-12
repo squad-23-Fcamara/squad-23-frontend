@@ -36,14 +36,25 @@ body {
   justify-content: center;
 }
 .grid-main .main .mentors-card {
-  border: 1px solid black;
   width: 100%;
   max-width: 350px;
   height: 440px;
-  padding: 16px;
+  margin: 16px;
+  background-color: #eee;
   border-radius: 0.6rem;
-  margin-bottom: 1rem;
   box-sizing: border-box;
+  box-shadow: 2px 2px 5px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+}
+.grid-main .main .mentors-card h3 {
+  font-size: 20px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.7rem;
+}
+.grid-main .main .mentors-card h4 {
+  margin-bottom: 0.3rem;
 }
 .grid-main .main .mentors-card-img {
   width: 100%;
@@ -64,6 +75,23 @@ body {
 }
 .grid-main .main .mentors-card-description-specialty {
   display: flex;
+  flex-flow: row wrap;
+}
+.grid-main .main .mentors-card-description-specialty h4 {
+  display: block;
+  padding: 0.5rem;
+  background-color: #bbb;
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px;
+}
+.grid-main .main .mentors-card-btn {
+  background-color: #000;
+  width: 9.7rem;
+  height: 2.8rem;
+  border-radius: 10px;
+  color: white;
+  margin: 2.2rem auto;
 }
 @media (min-width: 920px) {
   .grid-main {

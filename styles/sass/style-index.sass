@@ -34,9 +34,6 @@ body
         border: 1px solid green
         width: 100%
         height: auto
-
-        
-
     
         .mentors
             height: auto
@@ -46,15 +43,29 @@ body
             flex-flow: row wrap
             justify-content: center
 
-            &-card
-                border: 1px solid black 
+            &-card 
                 width: 100%
                 max-width: 350px
                 height: 440px
-                padding: 16px
+                margin: 16px
+                background-color: #eee
                 border-radius: .6rem
-                margin-bottom: 1rem
                 box-sizing: border-box
+                box-shadow: 2px 2px 5px
+
+                font-weight: bold
+
+                display: flex
+                flex-direction: column
+
+                h3
+                    font-size: 20px
+                    margin-top: .5rem
+                    margin-bottom: .7rem
+                
+                h4
+                    margin-bottom: .3rem
+                    
 
                 &-img
                     width: 100%
@@ -75,16 +86,23 @@ body
 
                     &-specialty
                         display: flex
-
-
-
-
-
-
-
-
-
-
+                        flex-flow: row wrap
+                    
+                    &-specialty h4  
+                        display: block
+                        padding: .5rem
+                        background-color: #bbb
+                        margin: .5rem
+                        border-radius: .5rem
+                        box-shadow: 1px 1px 3px 
+                
+                &-btn
+                    background-color: #000
+                    width: 9.7rem
+                    height: 2.8rem
+                    border-radius: 10px
+                    color: white
+                    margin: 2.2rem auto
 
 
         //DESKTOP
