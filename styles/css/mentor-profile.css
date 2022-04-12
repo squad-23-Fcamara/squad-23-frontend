@@ -17,22 +17,19 @@ body {
   background-color: #F0EDED;
   padding: 7.7rem 3.8rem 4.2rem 3.8rem;
   border-radius: 1rem;
+  position: relative;
 }
 .mentor-profile-image {
+  background-image: url(../../assets/img/profile.jfif);
+  background-size: cover;
+  background-position: center;
   width: 50%;
+  border-radius: 50%;
   max-width: 15rem;
-  max-height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  border-radius: 50%;
-}
-.mentor-profile-image img {
-  border-radius: 50%;
-  width: 70%;
-  height: 70%;
+  height: 15rem;
   margin: 2rem;
+  position: absolute;
+  top: -98px;
 }
 .mentor-profile-job-role {
   padding-bottom: 1rem;
