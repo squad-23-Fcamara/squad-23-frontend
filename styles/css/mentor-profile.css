@@ -23,11 +23,6 @@ body {
   width: 343px;
   height: 300px;
 }
-@media (min-width: 920px) {
-  .mentor-profile {
-    background-color: blue;
-  }
-}
 .mentor-profile-image {
   background-image: url(../../assets/img/profile.jfif);
   background-size: cover;
