@@ -1,27 +1,27 @@
 .menu {
-  /*MOBILE*/
   width: auto;
   height: auto;
-  /*DESKTOP*/
 }
 .menu #nav-btn {
   margin: 1rem;
+}
+@media (min-width: 920px) {
+  .menu #nav-btn {
+    display: none;
+  }
 }
 .menu #nav-menu {
   display: none;
 }
 @media (min-width: 920px) {
-  .menu {
+  .menu #nav-menu {
     display: block;
     background-color: #ccc;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .menu #nav-btn {
-    display: none;
-  }
-  .menu .profile {
+  .menu #nav-menu .profile {
     width: 100%;
     height: 40%;
     box-sizing: border-box;
@@ -29,36 +29,36 @@
     flex-direction: column;
     align-items: center;
   }
-  .menu .profile img {
+  .menu #nav-menu .profile img {
     border-radius: 50%;
     width: 7rem;
     height: 7rem;
     background-color: #8f8f8f;
     margin: 2rem auto;
   }
-  .menu .profile-info {
+  .menu #nav-menu .profile-info {
     width: auto;
     height: auto;
     text-align: center;
   }
-  .menu .nav {
-    border: 1px solid blue;
+  .menu #nav-menu .nav {
     width: 80%;
     height: 20rem;
+    margin-top: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
   }
-  .menu .nav a {
+  .menu #nav-menu .nav a {
     display: block;
     padding: 0.5rem;
     background-color: #eee;
   }
-  .menu .nav-item {
+  .menu #nav-menu .nav-item {
     text-align: center;
   }
-  .menu .nav-item-icon {
+  .menu #nav-menu .nav-item-icon {
     width: 100px;
     height: 100px;
   }
