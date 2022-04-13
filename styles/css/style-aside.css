@@ -3,7 +3,13 @@
   height: auto;
 }
 .menu #nav-btn {
-  margin: 1rem;
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+}
+.menu #nav-btn img {
+  margin: 0.4rem;
 }
 @media (min-width: 920px) {
   .menu #nav-btn {
@@ -20,10 +26,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100%;
   }
   .menu #nav-menu .profile {
     width: 100%;
-    height: 40%;
+    height: 18rem;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -33,7 +40,6 @@
     border-radius: 50%;
     width: 7rem;
     height: 7rem;
-    background-color: #8f8f8f;
     margin: 2rem auto;
   }
   .menu #nav-menu .profile-info {
@@ -41,27 +47,50 @@
     height: auto;
     text-align: center;
   }
+  .menu #nav-menu .profile-info a {
+    color: black;
+  }
   .menu #nav-menu .nav {
     width: 80%;
-    height: 20rem;
-    margin-top: 2rem;
+    height: 50rem;
+    margin-top: 6rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: flex-start;
   }
   .menu #nav-menu .nav a {
     display: block;
     padding: 0.5rem;
-    background-color: #eee;
+    text-decoration: none;
+    color: black;
   }
   .menu #nav-menu .nav-item {
     text-align: center;
+    margin: 2rem auto;
   }
   .menu #nav-menu .nav-item-icon {
     width: 100px;
     height: 100px;
   }
+  .menu #nav-menu .nav #nav-item-out-line {
+    margin-top: 10rem;
+  }
+}
+.menu #nav-menu:hover {
+  width: 40%;
+}
+.menu #nav-menu:hover .profile img {
+  border-radius: 50%;
+  width: 80%;
+  height: auto;
+  margin: 2rem 0.3rem;
+}
+.menu #nav-menu:hover .profile-info {
+  display: none;
+}
+.menu #nav-menu:hover .nav a h4 {
+  display: none;
 }
 
 /*# sourceMappingURL=style-aside.css.map */

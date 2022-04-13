@@ -7,7 +7,16 @@
     height: auto
 
     #nav-btn
-        margin: 1rem
+        width: 4rem
+        height: 4rem
+        
+        display: flex
+        justify-content: center
+
+        img
+            margin: .4rem
+
+        
         @include responsive-mixin.desktop
             display: none
         
@@ -21,12 +30,13 @@
             display: flex
             flex-direction: column
             align-items: center
-                
+
+            height: 100%
 
             // INFORMAÇÕES DO USUÁRIO
             .profile
                 width: 100%
-                height: 40%
+                height: 18rem
                 box-sizing: border-box
 
                 display: flex
@@ -37,36 +47,64 @@
                     border-radius: 50%
                     width: 7rem
                     height: 7rem
-                    background-color: #8f8f8f
                     margin: 2rem auto
 
                 &-info
                     width: auto
                     height: auto 
                     text-align: center
+
+                    a
+                        color: black
             
             //NAVEGADOR DAS PÁGINAS (MENU)
             .nav  
                 width: 80%
-                height: 20rem
-                margin-top: 2rem
-
+                height: 50rem
+                margin-top: 6rem
                 display: flex
                 flex-direction: column
                 align-items: center
-                justify-content: space-around
+                justify-content: flex-start
                 
                 a
                     display: block
                     padding: .5rem
-                    background-color: #eee
+                    text-decoration: none
+                    color: black
 
                 &-item
                     text-align: center
+                    margin: 2rem auto
 
                     &-icon
                         width: 100px
                         height: 100px
+                    
+                #nav-item-out-line
+                   margin-top: 10rem
+
+
+    #nav-menu:hover
+        @include responsive-mixin.desktop
+        width: 40%
+
+        .profile 
+            img
+                border-radius: 50%
+                width: 80%
+                height: auto
+                margin: 2rem .3rem
+
+            &-info 
+                display: none
+
+        //NAVEGADOR DAS PÁGINAS (MENU)
+        .nav
+            a
+                h4
+                    display: none
+        
 
 
                 

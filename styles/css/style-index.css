@@ -8,6 +8,15 @@ body {
 .grid-main {
   width: 100%;
 }
+@media (min-width: 920px) {
+  .grid-main {
+    padding: 0;
+    display: grid;
+    grid-template-columns: 12.8% auto;
+    grid-template-rows: auto auto;
+    grid-gap: 1rem;
+  }
+}
 .grid-main .research {
   border: 1px solid blue;
   width: 100%;
@@ -17,12 +26,26 @@ body {
   flex-direction: column;
   align-items: center;
 }
+@media (min-width: 920px) {
+  .grid-main .research {
+    border: 1px solid blue;
+    grid-column: 2/3;
+    grid-rows: 1/2;
+  }
+}
 .grid-main .research-search {
   width: 100%;
 }
 .grid-main .menu {
   position: absolute;
   top: 0;
+}
+@media (min-width: 920px) {
+  .grid-main .menu {
+    position: relative;
+    grid-column: 1/2;
+    grid-row: 1/3;
+  }
 }
 .grid-main .main {
   width: 100%;
@@ -99,17 +122,6 @@ body {
   margin: 2.2rem auto;
 }
 @media (min-width: 920px) {
-  .grid-main {
-    padding: 0;
-    display: grid;
-    grid-template-columns: 15.3vw 82vw;
-    grid-template-rows: 19.5vh auto;
-    grid-gap: 2vh 2vw;
-  }
-  .grid-main .menu {
-    grid-column: 1/2;
-    grid-row: 1/3;
-  }
   .grid-main .research {
     border: 1px solid blue;
     grid-column: 2/3;
