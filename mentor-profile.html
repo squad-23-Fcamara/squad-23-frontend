@@ -5,16 +5,24 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!--Styles-->
   <link rel="stylesheet" href="./styles/css/reset.css">
   <link rel="stylesheet" href="./styles/css/style-aside.css">
   <link rel="stylesheet" href="./styles/css/mentor-profile.css">
   <link rel="stylesheet" href="./styles/css/root.css">
   <link rel="stylesheet" href="./styles/css/font-size.css">
+  <link rel="stylesheet" href="./styles/css/position.css">
   <title></title>
 </head>
 
 <body>
-  <main>
+  <main class="main mobile-center">
     <header class="main-header">
       <img class="cover-image"src="https://blog.prepara.me/wp-content/uploads/2021/06/Capas-LinkedIn-8-1024x266.png" alt="Foto de capa do mentor">
     </header>
@@ -22,16 +30,14 @@
     
     <section>
 
-      <article class="mentor-profile">
-        <div class="mentor-profile-image">
-          <img src="http://www.rachegebran.com.br/wp-content/uploads/perfil.jpg" alt="Foto de perfil do mentor">
-        </div>
-
-        <div class="mentor-profile-main-div">
+      <article>
+        <div class="mentor-profile">
+          <div class="mentor-profile-image">
+          </div>
           <h2 class="mentor-profile-name font22">Guilherme Lima</h2>
-          <h3 class="mentor-profile-job-role font22">Desenvolvedor Sênior</h3>
+          <h3 class="mentor-profile-job-role font16">Desenvolvedor Sênior</h3>
           <hr class="divider">
-          <h3 class="mentor-profile-qualification">Ciência da Computação</h3>
+          <h3 class="mentor-profile-qualification font16">Ciência da Computação</h3>
           <hr class="divider">
           <ul class="mentor-profile-social-media">
             <i class="menor-profile-social-media-icon">i</i>
@@ -40,72 +46,89 @@
           </ul>
         </div>
         
-          <ul class="mentor-profile-contacts"><h3>Preferências de comunicação do mentor</h3>
-          <i class="mentor-profile-contacts-icon">i</i>
-          <i class="mentor-profile-contacts-icon">i</i>
-          <i class="mentor-profile-contacts-icon">i</i>
+          <ul class="mentor-profile-platform">
+            <h3 class="font14 mentor-profile-platform-title">Preferências de plataforma</h3>
+            <i class="mentor-profile-platform-icon">i</i>
+            <i class="mentor-profile-platform-icon">i</i>
+            <i class="mentor-profile-platform-icon">i</i>
         </ul>
       
       </article>
 
       <article class="about">
-        <h2 class="about-title">Sobre mim</h2>
-        <p class="about-biografy">Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur
+        <h2 class="about-title font18">Sobre mim</h2>
+        <p class="about-biografy font16">Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur
         duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint
         deserunt ut voluptate aute id deserunt nisi.</p>
-        <ul class="skills-list-title">Habilidades</ul>
-        <li class="skills-list-topic">HTML</li>
-        <li class="skills-list-topic">JavaScript</li>
-        <li class="skills-list-topic">React</li>
-        <li class="skills-list-topic">Java</li>
-        <li class="skills-list-topic">PHP</li>
-        <li class="skills-list-topic">C#</li>
+        <ul class="skills-list"><h2 class="skills-list-title font18">Habilidades</h2>        
+          <li class="skills-list-topic font14">HTML</li>
+          <li class="skills-list-topic font14">JavaScript</li>
+          <li class="skills-list-topic font14">React</li>
+          <li class="skills-list-topic font14">Java</li>
+          <li class="skills-list-topic font14">PHP</li>
+          <li class="skills-list-topic font14">C#</li>
+        </ul>
       </article>
 
       <article class="schedule">
-        <table>
-          <h3 class="table-month-year">Abril 2022</h3>
-          <th>
-            <div>
-              <h3>Segunda</h3>
-              <h4>20 Abr</h4>
-            </div>
-          </th>
-          <th>
-            <div>
-              <h3>Terça</h3>
-              <h4>21 Abr</h4>
-            </div>
-          </th>
-          <th>
-            <div>
-              <h3>Quarta</h3>
-              <h4>22 Abr</h4>
-            </div>
-          </th>
-          
-          <tr> <!--new line-->
-            <td>08:00</td> 
-            <td>08:00</td>
-            <td>08:00</td>
+        <span class="schedule-title+icon">
+          <h2 class="schedule-title font18">Dia/Hora</h2>
+          <i class="schedule-help-icon">i</i>
+        </span>
 
-          </tr>
-          <tr> <!--new line-->
-            <td>09:00</td> 
-            <td>09:00</td>
-            <td>09:00</td>
-          </tr>
-          <tr> <!--new line-->
-            <td>10:00</td> 
-            <td>10:00</td>
-            <td>10:00</td>
-          </tr>
-          <tr> <!--new line-->
-            <td>11:00</td> 
-            <td>11:00</td>
-            <td>11:00</td>
-          </tr>
-        </table>
+      <tr>
+          <h3 class="font16 schedule-month-year">Abril 2022</h3> 
+      </tr>
+
+        <div class="schedule-table">
+          <table class="font16">
+            <th>
+              <div class="schedule-day day-1">
+                <h3>Segunda</h3>
+                <h4>20 Abr</h4>
+              </div>
+            </th>
+            <th>
+              <div class="schedule-day day-2">
+                <h3>Terça</h3>
+                <h4>21 Abr</h4>
+              </div>
+            </th>
+            <th>
+              <div class="schedule-day day-3">
+                <h3>Quarta</h3>
+                <h4>22 Abr</h4>
+              </div>
+            </th>
+  
+            <div>
+              <tr> <!--new line-->
+                <td class="schedule-time">08:00</td> 
+                <td class="schedule-time">08:00</td>
+                <td class="schedule-time">08:00</td>
+              </tr>
+              <tr> <!--new line-->
+                <td class="schedule-time">09:00</td> 
+                <td class="schedule-time">09:00</td>
+                <td class="schedule-time">09:00</td>
+              </tr>
+              <tr> <!--new line-->
+                <td class="schedule-time">10:00</td> 
+                <td class="schedule-time">10:00</td>
+                <td class="schedule-time">10:00</td>
+              </tr>
+              <tr> <!--new line-->
+                <td class="schedule-time">11:00</td> 
+                <td class="schedule-time">11:00</td>
+                <td class="schedule-time">11:00</td>
+              </tr>
+            </div>
+          </table>
+        </div>
+
+
+        <button type="submit" class="schedule-button font20">Agendar mentoria</button>
+        <div class="schedule-button-sucess font14">Sua mentoria foi agendada com sucesso.</div>
 
       </article>
     </section>
