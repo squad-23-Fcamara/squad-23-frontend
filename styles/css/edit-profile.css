@@ -1,0 +1,15 @@
+.form-profile {
+  background-color: #E5E5E5;
+}
+.form-profile input {
+  display: block;
+  padding: 1.3rem 1.2rem;
+  justify-content: left;
+  border: 1px solid #716C6C;
+  border-radius: 0.6rem;
+}
+.form-profile #change-photo {
+  display: block;
+}
+
+/*# sourceMappingURL=edit-profile.css.map */
