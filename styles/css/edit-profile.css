@@ -1,5 +1,20 @@
+body {
+  margin: 1.6rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  box-sizing: border-box;
+}
+
 .form-profile {
   background-color: #E5E5E5;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.form-profile #change-photo {
+  display: block;
+  text-align: center;
+  color: black;
+  padding-top: 1.6rem;
 }
 .form-profile input {
   display: block;
@@ -7,9 +22,16 @@
   justify-content: left;
   border: 1px solid #716C6C;
   border-radius: 0.6rem;
+  margin: 0 auto;
+  margin-top: 0.5rem;
+  width: 80%;
 }
-.form-profile #change-photo {
-  display: block;
+.form-profile-label {
+  background-color: pink;
+}
+.form-profile .label-input {
+  text-align: center;
+  margin-top: 2.5rem;
 }
 
 /*# sourceMappingURL=edit-profile.css.map */
