@@ -1,0 +1,141 @@
+@use 'responsive-mixin'
+
+body
+   margin: 1.6rem
+   font-family: 'Montserrat', sans-serif
+   font-weight: 500
+   box-sizing: border-box
+
+   
+.main-header
+   .cover-image
+      display: none
+      @include responsive-mixin.desktop
+         display: inline
+
+.mentor-profile
+   background-color: #F0EDED
+   padding: 7.7rem 3.8rem 4.2rem 3.8rem
+   border-radius: 1rem
+   position: relative
+   box-sizing: border-box
+   width: 343px
+   height: 300px
+      
+   &-image
+      background-image: url(../../assets/img/profile.jfif)
+      background-size: cover
+      background-position: center
+      width: 50%
+      border-radius: 50%
+      max-width: 15rem
+      height: 15rem
+      margin: 2rem
+      position: absolute
+      //left: 94px
+      top: -98px
+
+   &-job-role 
+      padding-bottom: 1rem 
+   
+   &-qualification
+      padding: 2rem 0
+
+   &-social-media
+      padding-top: 2rem
+
+.mentor-profile-platform //platforms icons 
+   &-title
+      margin-top: 3.2rem
+      margin-bottom: 1.8rem
+
+.about
+   text-align: left
+   &-title 
+      font-weight: 700
+      margin-top: 5.2rem
+      margin-bottom: 1.2rem
+   &-biografy
+      margin-bottom: 1.2rem
+      font-weight: 300
+   .skills-list
+      &-title
+         margin-bottom: 1.2rem
+         font-weight: 700
+      &-topic
+         display: inline-block
+         margin-bottom: 1.2rem
+         margin-right: 1.3rem
+         background-color: #C4C4C4
+         padding: .6rem 2rem
+         border-radius: .5rem
+
+.schedule
+
+   &-title
+      text-align: left
+      font-weight: 700
+      margin-top: 3.2rem
+
+   &-month-year
+      border-top: 1px solid rgba(0, 0, 0, 0.4)
+      border-right: 1px solid rgba(0, 0, 0, 0.4)
+      border-left: 1px solid rgba(0, 0, 0, 0.4)
+      border-top-left-radius: 1rem
+      border-top-right-radius: 1rem
+      background-color: #585858
+      color: white
+      padding: 1rem
+
+
+   &-table 
+      border: 1px solid rgba(0, 0, 0, 0.4)
+      padding: 0
+      height: 275px //ou max-height (?)
+      border-bottom-left-radius: 1rem
+      border-bottom-right-radius: 1rem
+
+   table
+      width: 100%
+      border-collapse: separate
+      border-spacing: .9rem 1rem
+      margin-top: -8px
+
+   &-day
+      padding: .5rem 2rem
+
+   &-time
+      background-color: #C4C4C4
+      padding: .4rem
+      border-radius: .5rem
+
+   &-button
+      padding: 1.35rem 1.65rem
+      width: 20.2rem
+      border-radius: 1rem
+      margin-top: 5rem
+      margin-bottom: 5rem
+      background-color: black
+      color: white
+      box-sizing: border-box
+
+   &-button-sucess
+      // display: none
+      padding: 3.1rem 1.2rem
+      background-color: #C4C4C4
+      border-radius: 1rem
+
+         
+
+
+
+
+
+
+
+
+
+
+
+
+         
