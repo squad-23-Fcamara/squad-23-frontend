@@ -1,16 +1,27 @@
-const btnMenu = document.querySelector('.mainMenu');
-const closeMenu = document.querySelector('.closeMenu');
-const openMenu = document.querySelector('.openMenu');
+class NavMobile {
+    constructor (btnMenu, navMenu, nav) {
+        this.btnMenu = document.querySelector(btnMenu);
+        this.navMenu = document.querySelector(navMenu);
+        this.nav = document.querySelectorAll(nav);
+        this.activeCl = "active";
+    }
 
-function show(){
-    btnMenu.style.display = 'flex';
-    btnMenu.style.top = '0';
+addClickEvent() {
+    this.btnMenu.addEventListener("click", () => console.log ("Hey cara"));
 }
 
-function close(){
-    btnMenu.style.display = 'none';
+    init() {
+        if(this.btnMenu){
+            this.addClickEvent();
+        }
+        return this;
+    }
 }
 
+const NavMobileBar = new NavMobile(
+    ".btnMenu",
+    ".navMenu",
+    ".nav",
+);
 
-openMenu.addEventListener('click', show);
-closeMenu.addEventListener('click', close);
+NavMobileBar.init();

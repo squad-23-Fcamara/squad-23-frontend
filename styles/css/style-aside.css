@@ -6,11 +6,22 @@
 .menu #nav-btn {
   width: 7rem;
   height: 7rem;
+  position: absolute;
+  left: 6vw;
   display: flex;
+  flex-direction: column;
+  align-items: left;
   justify-content: center;
 }
-.menu #nav-btn img {
-  margin: 0.4rem;
+.menu #nav-btn span {
+  width: 32px;
+  height: 4px;
+  background-color: black;
+  margin: 8px;
+}
+.menu #nav-btn .line1, .menu #nav-btn .line3 {
+  width: 50px;
+  margin-left: 4px;
 }
 @media (min-width: 920px) {
   .menu #nav-btn {
@@ -22,6 +33,8 @@
   width: 70vw;
   background-color: #ccc;
   box-sizing: border-box;
+  margin-top: 0;
+  margin-left: -70vw;
   display: flex;
   flex-direction: column;
 }
@@ -151,6 +164,9 @@
   .menu #nav-menu:hover .nav #nav-item-out-line {
     margin-top: 9vh;
   }
+}
+.menu .nav-menu-active {
+  transform: translateX(0);
 }
 
 /*# sourceMappingURL=style-aside.css.map */
