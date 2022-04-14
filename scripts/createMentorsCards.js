@@ -1,7 +1,7 @@
 const mentorsContainer = document.getElementById('mentors')
 
 async function fetchMentors() {
-  const response = await axios.get("https://squad23-api.herokuapp.com/mentors")
+  const response = await axios.get('https://squad23-api.herokuapp.com/mentors')
 
   const mentors = response.data
 
@@ -40,7 +40,7 @@ function createMentorCard(mentor) {
   mentorName.textContent = mentor.name
   mentorRole.textContent = mentor.role
   mentorDescription.appendChild(mentorSkills)
-  mentor.skills.map((skill) => {
+  mentor.skills.map(skill => {
     mentorSkills.appendChild(createSkillText(skill))
   })
 
