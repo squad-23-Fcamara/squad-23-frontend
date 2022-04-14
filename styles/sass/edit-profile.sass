@@ -1,56 +1,55 @@
+* 
+   box-sizing: border-box
+
 body
    font-family: 'Montserrat', sans-serif
    font-weight: 500
-   box-sizing: border-box
 
 main
-   margin: 1.6rem
+   padding: 1.6rem
 
 .form-profile
    background-color: #E5E5E5
-   margin: 12rem auto 2.4rem auto
-   padding: 6.8rem 1.7rem 1.2rem 1.7rem
-   box-sizing: border-box
+   display: flex
+   flex-direction: column
+   justify-content: center
    border-radius: 1rem
-   position: relative 
+   width: 100%
 
    &-image 
       background-image: url(../../assets/img/profile.jfif)
       background-size: cover
-      background-position: center
+      background-position: center  
       width: 50%
       border-radius: 50%
       max-width: 15rem
       height: 15rem
-      margin: 2rem
-      position: absolute
-      //left: 94px
-      top: -98px
-         
+      margin: -95px auto
+
    #change-photo
       display: block
       text-align: center
       color: black
       padding-top: 1.6rem
+      margin-top: 10rem
+
+   .label-input
+      margin-top: 2.5rem
+      width: 100%
+      padding: 0 2rem
 
    input 
       display: block
       padding: 1.3rem 1.2rem
-      justify-content: left
       border: 1px solid #716C6C
       border-radius: .6rem
-      margin: 0 auto
       margin-top:.5rem
-      width: 80%
-
-   .label-input
-      margin-top: 2.5rem
-      text-align: center
+      width: 100%
 
    #about
       height: 145px
-
-
+      width: 100%
+   
    .social-media-title 
       font-weight: 600
 
@@ -73,13 +72,69 @@ main
    padding-bottom: .9rem
    padding-left: 1.6rem
 
+#mentor-panel
+   margin-bottom: 10rem
+
+.interests-opened
+   width: 100%
+   border: 1px solid red
+   align-items: center
+   margin: 0 auto
+   
+   .opened-topic
+      padding: 1rem
+      width: 40%
+      display: inline-block
+      border: 1px solid black
+      border-radius: 1rem
+      margin: 0 auto
+
+   .second-line
+      align-items: center
+      margin: 0 auto
+      border: 1px solid green
+
+#button-plus
+   margin-top: 2.3rem
+
+.mentor-panel-opened
+   .planning-warning
+      background-color: #d1cfcf
+      padding: 2.5rem 5rem
+      border-radius: 1rem
+      height: 144px
+
+      &-title
+         text-align: center
+         margin-bottom: .9rem
+
+.schedule-date-hour
+   background-color: yellow
+   margin: 2rem 0 3.6rem 0
+   padding: 1.5rem .7rem
+   border-radius: 1rem
+   input 
+      display: block
+      padding: 1.3rem 1.2rem
+      border: 1px solid #716C6C
+      border-radius: .6rem
+      margin-top:.5rem
+      width: 100%
+
+
+   .schedule-date
+      margin-bottom: 3.5rem
+
+
 .footer
    width: 100%
-   background-color: #B1AAAA
+   background-color: #b1aaaa
    text-align: center
    padding-top: .6rem
    padding-bottom: .6rem
-
+   
+   #top-page
+      color: black
 
 
       

@@ -1,20 +1,23 @@
-body {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
+* {
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
 main {
-  margin: 1.6rem;
+  padding: 1.6rem;
 }
 
 .form-profile {
   background-color: #E5E5E5;
-  margin: 12rem auto 2.4rem auto;
-  padding: 6.8rem 1.7rem 1.2rem 1.7rem;
-  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   border-radius: 1rem;
-  position: relative;
+  width: 100%;
 }
 .form-profile-image {
   background-image: url(../../assets/img/profile.jfif);
@@ -24,32 +27,31 @@ main {
   border-radius: 50%;
   max-width: 15rem;
   height: 15rem;
-  margin: 2rem;
-  position: absolute;
-  top: -98px;
+  margin: -95px auto;
 }
 .form-profile #change-photo {
   display: block;
   text-align: center;
   color: black;
   padding-top: 1.6rem;
+  margin-top: 10rem;
+}
+.form-profile .label-input {
+  margin-top: 2.5rem;
+  width: 100%;
+  padding: 0 2rem;
 }
 .form-profile input {
   display: block;
   padding: 1.3rem 1.2rem;
-  justify-content: left;
   border: 1px solid #716C6C;
   border-radius: 0.6rem;
-  margin: 0 auto;
   margin-top: 0.5rem;
-  width: 80%;
-}
-.form-profile .label-input {
-  margin-top: 2.5rem;
-  text-align: center;
+  width: 100%;
 }
 .form-profile #about {
   height: 145px;
+  width: 100%;
 }
 .form-profile .social-media-title {
   font-weight: 600;
@@ -75,12 +77,72 @@ main {
   padding-left: 1.6rem;
 }
 
+#mentor-panel {
+  margin-bottom: 10rem;
+}
+
+.interests-opened {
+  width: 100%;
+  border: 1px solid red;
+  align-items: center;
+  margin: 0 auto;
+}
+.interests-opened .opened-topic {
+  padding: 1rem;
+  width: 40%;
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 1rem;
+  margin: 0 auto;
+}
+.interests-opened .second-line {
+  align-items: center;
+  margin: 0 auto;
+  border: 1px solid green;
+}
+
+#button-plus {
+  margin-top: 2.3rem;
+}
+
+.mentor-panel-opened .planning-warning {
+  background-color: #d1cfcf;
+  padding: 2.5rem 5rem;
+  border-radius: 1rem;
+  height: 144px;
+}
+.mentor-panel-opened .planning-warning-title {
+  text-align: center;
+  margin-bottom: 0.9rem;
+}
+
+.schedule-date-hour {
+  background-color: yellow;
+  margin: 2rem 0 3.6rem 0;
+  padding: 1.5rem 0.7rem;
+  border-radius: 1rem;
+}
+.schedule-date-hour input {
+  display: block;
+  padding: 1.3rem 1.2rem;
+  border: 1px solid #716C6C;
+  border-radius: 0.6rem;
+  margin-top: 0.5rem;
+  width: 100%;
+}
+.schedule-date-hour .schedule-date {
+  margin-bottom: 3.5rem;
+}
+
 .footer {
   width: 100%;
-  background-color: #B1AAAA;
+  background-color: #b1aaaa;
   text-align: center;
   padding-top: 0.6rem;
   padding-bottom: 0.6rem;
+}
+.footer #top-page {
+  color: black;
 }
 
 /*# sourceMappingURL=edit-profile.css.map */

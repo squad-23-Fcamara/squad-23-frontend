@@ -43,7 +43,7 @@
 
          <div class="label-input">
             <label class="form-profile-label font14" for="about">Sobre mim</label>
-            <input type="text" id="about" placeholder="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.">
+            <input id="about" placeholder="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.">
          </div>
 
          <div class="label-input">
@@ -65,18 +65,73 @@
 
       </form>
 
-      <div class="open-button font18">
+      <div class="open-button font18" id="interests">
          <h2>Interesses</h2>
       </div>
 
-      <div class="open-button font18">
+      <div class="interests-opened">
+         <ul>
+            <div class="first-line">
+               <li class="interests-opened-topic">Design Thinking</li>
+               <li class="interests-opened-topic">Figma</li>
+            </div>
+            <div class="second-line">
+               <li class="interests-opened-topic">Adobe XD</li>
+               <li class="interests-opened-topic">Sketch</li>
+            </div>
+         </ul>
+      </div>
+      
+      <div id="button-plus">
+         <h4>Clique para adicionar mais interesses</h4>
+      </div>
+
+      <div class="open-button font18" id="mentor-panel">
          <h2>Painel do mentor</h2>
+      </div>
+
+      <div class="mentor-panel-opened">
+
+         <h3 class="font16">Habilidades</h3>
+
+         <ul>
+            <div class="first-line">
+               <li class="opened-topic hability"></li>
+               <li class="opened-topic hability"></li>
+            </div>
+            <div class="second-line">
+               <li class="opened-topic hability"></li>
+               <li class="opened-topic hability"></li>
+            </div>
+         </ul>
+         <div id="button-plus">
+            <h4>Clique para adicionar mais habilidades</h4>
+         </div>
+
+         <div class="planning-warning">
+            <h4 class="planning-warning-title font16">Planejamento de mentorias</h4>
+            <p class="planning-warning-description font14">O painel acima mostra as datas e horários que você já adicionou ao seu perfil e ainda não foram marcadas por nenhum mentorado</p>
+         </div>
+
+         <div class="schedule-date-hour">
+            <div class="schedule-date">
+               <label for="date-input" class="font14">Data</label>
+               <input type="date" name="date-input" id="date-input">
+            </div>
+            <div class="schedule-time">
+               <label for="time-input" class="font14">Hora</label>
+               <input type="time" name="time-input" id="time-input">
+            </div>
+
+
+         </div>
+
       </div>
 
    </main>
 
    <footer class="footer">
-      <a class="top-page">Ir para o topo da página</a>
+      <a href="#" id="top-page">Ir para o topo da página</a>
    </footer>
 </body>
 </html>
