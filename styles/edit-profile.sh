@@ -1,1 +1,1 @@
-sass --watch sass/edit-profile.sass:css/edit-profile.css
+sass --watch sass/colors.sass:css/colors.css
