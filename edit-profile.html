@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <!--Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!--Styles-->
+   <link rel="stylesheet" href="./styles/css/reset.css">
+   <link rel="stylesheet" href="./styles/css/style-aside.css">
+   <link rel="stylesheet" href="./styles/css/edit-profile.css">
+   <link rel="stylesheet" href="./styles/css/root.css">
+   <link rel="stylesheet" href="./styles/css/font-size.css">
+   <title></title>
+</head>
+<body>
+   <header class="header">
+      <i class="">icon</i>
+      <i class="logo-header">icon</i>
+   </header>
+   <main>
+      <form class="form-profile">
+
+         <div class="form-profile-image"></div>
+
+         <a id="change-photo" href="#">Alterar foto</a>
+
+         <div class="label-input">
+            <label class="form-profile-label font14" for="name">Nome</label>
+            <input type="text"id="name" placeholder="Cristina Martins">
+         </div>
+
+         <div class="label-input">
+            <label class="form-profile-label font14" for="job-role">Cargo</label>
+            <input type="text" id="job-role" placeholder="UX Designer">
+         </div>
+
+         <div class="label-input">
+            <label class="form-profile-label font14" for="email">Email</label>
+            <input type="email" id="email" placeholder="cristinamartins@fcamara.com">
+         </div>
+
+         <div class="label-input">
+            <label class="form-profile-label font14" for="about">Sobre mim</label>
+            <input id="about" placeholder="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.">
+         </div>
+
+         <div class="label-input">
+            <label class="form-profile-label font14" for="education">Formação</label>
+            <input type="text" id="education">
+            <input type="text" id="education">
+         </div>
+
+         <div class="label-input">
+            <label class="form-profile-label social-media-title font14" for="">Redes sociais</label>
+            <input type="url" name="userLinkedin" id="userLinkedin">
+            <input type="url" name="userMedium" id="userMedium">
+            <input type="url" name="userBehance" id="userBehance">
+            <input type="url" name="userGithub" id="userGithub">
+            <input type="url" name="userTwitter" id="userTwitter">
+         </div>
+
+            <button class="font16 save-button" type="submit">Salvar alterações</button>
+
+      </form>
+
+      <div class="open-button font18" id="interests">
+         <h2>Interesses</h2>
+         <i class="">i</i>
+      </div>
+
+      <div class="interests-opened">
+         <ul>
+            <div class="first-line">
+               <li class="opened-topic">Design Thinking</li>
+               <li class="opened-topic">Figma</li>
+            </div>
+            <div class="second-line">
+               <li class="opened-topic">Adobe XD</li>
+               <li class="opened-topic">Sketch</li>
+            </div>
+         </ul>
+      </div>
+      
+      <div id="button-plus">
+         <i class="">i</i>
+         <h4>Clique para adicionar mais interesses</h4>
+      </div>
+
+      <div class="open-button font18" id="mentor-panel">
+         <h2>Painel do mentor</h2>
+         <i class="">i</i>
+                     
+      </div>
+
+      <div class="mentor-panel-opened">
+
+         <h3 class="font16 habilities-title">Habilidades</h3>
+
+         <ul>
+            <div class="first-line">
+               <li class="opened-topic hability">Product Discovery</li>
+               <li class="opened-topic hability">Product Discovery</li>
+            </div>
+            <div class="second-line">
+               <li class="opened-topic hability">Product Discovery</li>
+               <li class="opened-topic hability">Product Discovery</li>
+            </div>
+         </ul>
+         <div id="button-plus">
+            <i class="">i</i>
+            <h4>Clique para adicionar mais habilidades</h4>
+         </div>
+
+         <div class="calendar">
+            CALENDÁRIO
+         </div>
+
+         <div class="planning-warning">
+            <h4 class="planning-warning-title font16">Planejamento de mentorias</h4>
+            <p class="planning-warning-description font14">O painel acima mostra as datas e horários que você já adicionou ao seu perfil e ainda não foram marcadas por nenhum mentorado</p>
+         </div>
+
+         <h2 id="schedule-title" class="font18">Adicione mais horários a sua agenda</h2>
+
+         <div class="schedule-date-hour">
+            <div class="schedule-date">
+               <label for="date-input" class="font14">Data</label>
+               <input type="date" name="date-input" id="date-input">
+            </div>
+            <div class="schedule-time">
+               <label for="time-input" class="font14">Hora</label>
+               <input type="time" name="time-input" id="time-input">
+            </div>
+         </div>
+
+         <div class="platforms">
+            <h3 class="font18">Selecione a plataforma</h3>
+            <ul class="mentor-platforms">
+               <i class="mentor-platforms-icon">i</i>
+               <i class="mentor-platforms-icon">i</i>
+               <i class="mentor-platforms-icon">i</i>
+             </ul>
+
+             <button id="confirm-button" class="font18" type="submit">Confirmar disponibilidade</button>
+         </div>
+
+      </div>
+
+   </main>
+
+   <footer class="footer">
+      <a href="#" id="top-page">Ir para o topo da página</a>
+   </footer>
+</body>
+</html>
