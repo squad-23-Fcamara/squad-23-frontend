@@ -1,4 +1,9 @@
-const userUUID = location.search.split('=')[1]
+const mentorUUID = location.search.split('=')[1]
+const testerUUID = 'df6dafd4-42fe-4d55-bd72-934c6a602c89'
+const container = document.getElementById('dates')
+const form = document.getElementById('schedule-form')
+let selectedDate
+let mentor
 
 function createMentorProfile(mentor) {
   const profile = document.getElementById('profile')
@@ -64,11 +69,48 @@ function createMentorProfile(mentor) {
   }
 }
 
-function createLi(parent, text) {
+function createSkillsLi(parent, text) {
   const li = document.createElement('li')
   li.className = 'skills-list-topic font14'
   li.textContent = text
+
   parent.appendChild(li)
+}
+
+function createDateInputs(date) {
+  const radio = document.createElement('input')
+  radio.type = 'radio'
+  radio.value = date
+  radio.id = date
+  radio.name = 'date-option'
+
+  mentor.mentorings.map(mentoring => {
+    mentoring.schedule_to === date
+      ? (radio.disabled = true)
+      : (radio.disabled = false)
+  })
+
+  const label = document.createElement('label')
+  label.textContent = new Intl.DateTimeFormat('pt-BR', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+    hour: 'numeric',
+    minute: 'numeric',
+    weekday: 'long',
+    timeZone: 'UTC'
+  }).format(new Date(date))
+  label.htmlFor = date
+
+  form.appendChild(radio)
+  form.appendChild(label)
+
+  radio.onclick = e => (selectedDate = e.target.value)
+}
+
+const button = document.getElementById('btn')
+button.onclick = () => {
+  handleSchedule(mentor)
 }
 
 function createMentorAboutSection(mentor) {
@@ -87,20 +129,36 @@ function createMentorAboutSection(mentor) {
   about.appendChild(biography)
   about.appendChild(skillsList)
   skillsList.appendChild(habilities)
-  mentor.skills.map(skill => createLi(skillsList, skill))
+  mentor.skills.map(skill => createSkillsLi(skillsList, skill))
+}
+
+async function handleSchedule() {
+  const mentoring = {
+    schedule_to: selectedDate,
+    mentor_id: mentorUUID,
+    mentored_id: testerUUID,
+    platform: 'Teams',
+    theme: mentor.skills
+  }
+
+  const response = await axios.post(
+    `https://squad23-api.herokuapp.com/schedule/create`,
+    mentoring
+  )
+
+  return response.data
 }
 
 async function fetchMentor() {
   const response = await axios.get(
-    `https://squad23-api.herokuapp.com/users/${userUUID}`
+    `https://squad23-api.herokuapp.com/users/${mentorUUID}`
   )
 
-  const mentor = response.data
+  mentor = response.data
 
   createMentorProfile(mentor)
   createMentorAboutSection(mentor)
-  mentor.availableDates.map(date => createListOfDate(date))
-  createTable()
+  mentor.availableDates.map(date => createDateInputs(date))
 }
 
 fetchMentor()
