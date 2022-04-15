@@ -60,9 +60,6 @@
   padding: 0.5rem;
   text-decoration: none;
 }
-#menu .nav-menu_open {
-  transform: translateX(0);
-}
 @media (min-width: 920px) {
   #menu .nav-menu {
     display: block;
@@ -86,9 +83,10 @@
   }
   #menu .nav-menu .profile img {
     border-radius: 50%;
-    width: 4.5rem;
+    width: 3rem;
     height: auto;
     margin: 2rem 0.3rem;
+    transition: width 0.4s;
   }
   #menu .nav-menu .profile-info {
     display: none;
@@ -96,7 +94,7 @@
   #menu .nav-menu .nav {
     width: 80%;
     height: 50vh;
-    margin-top: 10vh;
+    margin-top: 15vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -163,6 +161,9 @@
   #menu .nav-menu:hover .nav #nav-item-out-line {
     margin-top: 9vh;
   }
+}
+#menu .nav-menu-open {
+  transform: translateX(0);
 }
 
 /*# sourceMappingURL=style-aside.css.map */
