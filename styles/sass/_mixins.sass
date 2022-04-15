@@ -1,7 +1,27 @@
+@use 'colors'
+
 @mixin card  
     width: 342px
     height: 437px
     border: 1px solid black
     
+@mixin primStyle
+    height: 50px
+    color: white
+    width: 9.7rem
+    background-color: colors.$primary
+    margin: 2.2rem auto
+    border-radius: 10px
     
+@mixin SecStyle
+    border: 2px solid colors.$secondary
+    border-radius: 10px
+    height: 50px
+
+@mixin speciality
+    border: 2px solid colors.$secondary
+    border-radius: .5rem
+    margin: .5rem
+    box-shadow: 1px 1px 3px 
+    padding: .5rem
 
