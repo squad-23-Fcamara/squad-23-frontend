@@ -16,6 +16,13 @@ header
    padding: 1.6rem
    padding-bottom: 10rem
    
+#logo-mobile
+   margin: 0 auto
+   text-align: center 
+   padding-bottom: 2rem
+   margin-bottom: 10rem
+   align-items: center
+
    .logo-header
       text-align: center 
       align-items: center
@@ -74,10 +81,6 @@ header
       margin-top:.5rem
       width: 100%
 
-      @include responsive-mixin.desktop
-         
-
-
    #about
       height: 145px
       width: 100%
@@ -120,6 +123,12 @@ header
    width: 100%
    align-items: center
    margin: 0 auto
+
+   @include responsive-mixin.desktop
+      width: 100%
+      display: grid
+      grid-template-columns: 60% 38%
+      column-gap: 2%
    
 .opened-topic
    padding: 1rem
@@ -129,14 +138,12 @@ header
    border-radius: 1rem
    margin: 0 auto
    color: colors.$black-blue
+   margin-bottom: 2rem
+   margin-right: 2rem
 
-.first-line
-   margin: 0 auto
-   margin-bottom: 1rem 
 
-   .second-line
-      align-items: center
-      margin: 0 auto
+   @include responsive-mixin.mobile
+      width: 130px
 
 #button-plus
    margin-top: 2.3rem
@@ -160,6 +167,10 @@ header
       height: 144px
       margin-top: 1.6rem
 
+      @include responsive-mixin.desktop
+         width: 78rem
+         margin: 0 auto
+
       &-title
          text-align: center
          margin-bottom: .9rem
@@ -170,21 +181,48 @@ header
 
 #schedule-title
    font-width: 600
-   padding-top: 3rem
+   padding-top: 6rem
+   font-weight: 600
+   text-align: center
+
+   &-description 
+      text-align: center
+      padding-top: 1rem
+      padding-bottom: 2rem
+
+      @include responsive-mixin.mobile
+         display: none
+
 
 .schedule-date-hour
    background-color: colors.$secondary-7
-   margin: 2rem 0 3.6rem 0
-   padding: 1.5rem .7rem
+   margin: 2rem 0 3.6rem 0rem 
+   padding: 1.5rem .7rem 0rem .7rem
    border-radius: 1rem
+
+   @include responsive-mixin.desktop
+      display: grid
+      grid-template-columns: 49% 49%
+      column-gap: 2%
+      margin: 0 auto
+      width: 78rem
+
    input 
       display: block
-      padding: 1.3rem 1.2rem
+      padding: 1.3rem 1.2rem 1.2rem 1.2rem
       border: 1px solid #716C6C
       border-radius: .6rem
       margin-top:.5rem
+      margin-bottom: .5rem
       width: 100%
 
+   .schedule-time
+      padding: 1rem
+      border-sizing: border-box
+
+   .schedule-date
+      padding: 1rem
+      border-sizing: border-box
 
    .schedule-date
       margin-bottom: 3.5rem
@@ -194,10 +232,18 @@ header
    padding-bottom: 10rem
 
    h3
-      padding-bottom: 2.2rem
+
+      padding: 2.5rem 0
 
    .mentor-platforms
       padding-bottom: 4rem
+
+      img
+         padding: 2rem
+
+         ::hover
+            cursor: pointer
+         
 
    #confirm-button
       padding: 1.35rem 2.35rem
@@ -218,5 +264,3 @@ header
    #top-page
       color: white
 
-
-      

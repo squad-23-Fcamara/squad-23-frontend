@@ -16,7 +16,15 @@ header {
   padding: 1.6rem;
   padding-bottom: 10rem;
 }
-header .logo-header {
+
+#logo-mobile {
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 2rem;
+  margin-bottom: 10rem;
+  align-items: center;
+}
+#logo-mobile .logo-header {
   text-align: center;
   align-items: center;
 }
@@ -121,6 +129,14 @@ header .logo-header {
   align-items: center;
   margin: 0 auto;
 }
+@media (min-width: 920px) {
+  .interests-opened {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 60% 38%;
+    column-gap: 2%;
+  }
+}
 
 .opened-topic {
   padding: 1rem;
@@ -130,15 +146,13 @@ header .logo-header {
   border-radius: 1rem;
   margin: 0 auto;
   color: #0F0E45;
+  margin-bottom: 2rem;
+  margin-right: 2rem;
 }
-
-.first-line {
-  margin: 0 auto;
-  margin-bottom: 1rem;
-}
-.first-line .second-line {
-  align-items: center;
-  margin: 0 auto;
+@media (max-width: 920px) {
+  .opened-topic {
+    width: 130px;
+  }
 }
 
 #button-plus {
@@ -163,6 +177,12 @@ header .logo-header {
   height: 144px;
   margin-top: 1.6rem;
 }
+@media (min-width: 920px) {
+  .mentor-panel-opened .planning-warning {
+    width: 78rem;
+    margin: 0 auto;
+  }
+}
 .mentor-panel-opened .planning-warning-title {
   text-align: center;
   margin-bottom: 0.9rem;
@@ -174,22 +194,52 @@ header .logo-header {
 
 #schedule-title {
   font-width: 600;
-  padding-top: 3rem;
+  padding-top: 6rem;
+  font-weight: 600;
+  text-align: center;
+}
+#schedule-title-description {
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+@media (max-width: 920px) {
+  #schedule-title-description {
+    display: none;
+  }
 }
 
 .schedule-date-hour {
   background-color: #F1F1FF;
-  margin: 2rem 0 3.6rem 0;
-  padding: 1.5rem 0.7rem;
+  margin: 2rem 0 3.6rem 0rem;
+  padding: 1.5rem 0.7rem 0rem 0.7rem;
   border-radius: 1rem;
+}
+@media (min-width: 920px) {
+  .schedule-date-hour {
+    display: grid;
+    grid-template-columns: 49% 49%;
+    column-gap: 2%;
+    margin: 0 auto;
+    width: 78rem;
+  }
 }
 .schedule-date-hour input {
   display: block;
-  padding: 1.3rem 1.2rem;
+  padding: 1.3rem 1.2rem 1.2rem 1.2rem;
   border: 1px solid #716C6C;
   border-radius: 0.6rem;
   margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   width: 100%;
+}
+.schedule-date-hour .schedule-time {
+  padding: 1rem;
+  border-sizing: border-box;
+}
+.schedule-date-hour .schedule-date {
+  padding: 1rem;
+  border-sizing: border-box;
 }
 .schedule-date-hour .schedule-date {
   margin-bottom: 3.5rem;
@@ -200,10 +250,16 @@ header .logo-header {
   padding-bottom: 10rem;
 }
 .platforms h3 {
-  padding-bottom: 2.2rem;
+  padding: 2.5rem 0;
 }
 .platforms .mentor-platforms {
   padding-bottom: 4rem;
+}
+.platforms .mentor-platforms img {
+  padding: 2rem;
+}
+.platforms .mentor-platforms img ::hover {
+  cursor: pointer;
 }
 .platforms #confirm-button {
   padding: 1.35rem 2.35rem;
