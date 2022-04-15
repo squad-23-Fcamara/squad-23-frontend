@@ -29,6 +29,11 @@ header .logo-header {
   border-radius: 1rem;
   width: 100%;
 }
+@media (min-width: 920px) {
+  .form-profile {
+    background-color: white;
+  }
+}
 .form-profile-image {
   background-image: url(../../assets/img/profile.jfif);
   background-size: cover;
@@ -46,10 +51,25 @@ header .logo-header {
   padding-top: 1.6rem;
   margin-top: 10rem;
 }
+.form-profile #profile-informations {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+@media (max-width: 920px) {
+  .form-profile #profile-informations {
+    display: none;
+  }
+}
 .form-profile .label-input {
   margin-top: 2.5rem;
   width: 100%;
   padding: 0 2rem;
+}
+.form-profile .double-input {
+  display: grid;
+  grid-template-columns: 60% 38%;
+  column-gap: 2%;
 }
 .form-profile input {
   display: block;
@@ -74,6 +94,15 @@ header .logo-header {
   padding: 1rem 3.4rem;
   background-color: #FE5517;
   color: white;
+  width: 20rem;
+  height: 5rem;
+}
+
+@media (min-width: 920px) {
+  .main-grid {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+  }
 }
 
 .open-button {

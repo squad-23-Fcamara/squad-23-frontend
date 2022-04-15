@@ -1,4 +1,5 @@
-@use 'colors'   
+@use 'colors'
+@use 'responsive-mixin'
    
 * 
    box-sizing: border-box
@@ -27,6 +28,9 @@ header
    border-radius: 1rem
    width: 100%
 
+   @include responsive-mixin.desktop
+      background-color: white
+
    &-image 
       background-image: url(../../assets/img/profile.jfif)
       background-size: cover
@@ -44,10 +48,23 @@ header
       padding-top: 1.6rem
       margin-top: 10rem
 
+   #profile-informations
+      padding-top: 1rem 
+      padding-bottom: 1rem
+      text-align: center
+      @include responsive-mixin.mobile
+         display: none
+      	
    .label-input
       margin-top: 2.5rem
       width: 100%
       padding: 0 2rem
+
+   .double-input
+      display: grid
+      grid-template-columns: 60% 38%
+      column-gap: 2%
+
 
    input 
       display: block
@@ -56,6 +73,10 @@ header
       border-radius: .6rem
       margin-top:.5rem
       width: 100%
+
+      @include responsive-mixin.desktop
+         
+
 
    #about
       height: 145px
@@ -72,6 +93,15 @@ header
       padding: 1rem 3.4rem
       background-color: colors.$primary
       color: white
+      width: 20rem
+      height: 5rem
+
+   // === GRID DESKTOP ===
+
+.main-grid
+   @include responsive-mixin.desktop
+      display: grid
+      grid-template-columns: 33% 33% 33%
 
 .open-button
    background-color: colors.$secondary
