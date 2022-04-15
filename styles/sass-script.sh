@@ -1,1 +1,0 @@
-sass --watch sass/mentor-profile.sass:css/mentor-profile.css
