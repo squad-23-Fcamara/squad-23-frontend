@@ -13,21 +13,22 @@
 
 .mentorship-schedule-title {
   text-align: center;
+  text-align: top;
 }
 
 .main-first-larger-square {
-  border-color: rgb(65, 14, 14);
   display: flex;
   flex-direction: column-reverse;
+  width: auto;
 }
 
 .first-square-appointment {
-  width: 100%;
+  width: auto;
+  height: auto;
 }
 
 /* First line of first square with title and subtitles */
 .appointment-list-title-legend {
-  background-color: blue;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -39,15 +40,16 @@
 }
 
 .legends {
-  background-color: rgb(0, 255, 136);
-  max-width: 343px;
-  max-height: 248px;
-  height: auto;
-  width: auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
+
+  max-width: 343px;
+  max-height: 248px;
+  height: auto;
+  width: auto;
+  
 }
 
 .content-legend {
@@ -61,8 +63,8 @@
   width: 12px;
   height: 12px;
   border-radius: 50%; 
-  background-color: red;
   margin: 0 0.3rem 0 0;
+  background-color: rgb(254, 85, 23);
 }
 
 /* Second line of first square with title and subtitles */
@@ -71,10 +73,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  margin: 2%;
   border-radius: 10px;
+  
   height: auto;
   width: auto;
-  background-color: rgb(233, 214, 214);
+  
+  background-color: #A8A8D0;
 }
 
 .appointment-list-mentor-photo {
@@ -136,19 +142,28 @@
   background: rgba(254, 85, 23, 1);
 }
 
-/* Segundo quadrado do principal */
-/* Informações */
+/* Second square main */
+/* Informations */
 .second-square-info-calend {
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
+  justify-content: center;
 }
 
 .information {
   border: 0.1rem solid rgb(98, 99, 171);
+  margin: 20px;
+  padding: 5%;
+  width: auto;
+  align-items: center;
 }
 
 /* Calendário */
+.calendar-main {
+  width: auto;
+  height: auto;
+}
 
 /*------------ DESKTOP ------------*/
 
@@ -158,6 +173,7 @@
   grid-template-columns: 12.8% auto;
   grid-template-rows: auto auto;
   grid-gap: 1rem;
+
   width: 80%;
   height: 100%;
   }
@@ -167,17 +183,10 @@
     grid-row: 1/3;
   }
 
-  
   .container-main {
     grid-column: 2/3;
     grid-row: 2/3;
-    background-color: brown;
-  }
-
-  .main-first-larger-square {
-    max-width: 1434px;
-    max-height: 787px;
- 
+    width: 100vw;
   }
 
   .title {
@@ -185,5 +194,113 @@
     grid-row: 1/2;
   }
 
+  .mentorship-schedule-title {
+   text-align: left;
+  }
+
+  .main-first-larger-square {
+    max-width: 1434px;
+    max-height: 787px;
+    width: auto;
+
+    display: flex;
+    flex-direction: row;
+  }
+
+  .first-square-appointment {
+    border-radius: 10px;
+    background-color: rgb(224, 224, 224);
+  }
+
+  /* Appointment list */
+  .appointment-content-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: auto;
+    
+    align-items: flex-start;
+    justify-content: left;
+
+    height: 13.5%;
+    background: #FFFFFF;
+  }
+
+  /*Legends*/
+  .appointment-list-title-legend {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .legends {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+  }
+ 
+  /*Mentorships*/
+  .appointment-list-mentor-photo {
+    width: auto;
+  }
+  
+  .appointment-list-mentor-photo img {
+    height: 70px;
+    width: 70px;
+  
+    margin: 1rem 1.5rem;
+  }
+
+  .appointment-list-mentor-photo h2, h4 {
+    margin-block: 0;
+    margin: 0 0.1rem;
+  }
+
+  .date-hour {
+    display: inline-flex;
+    justify-content: center;
+  
+    height: auto;
+  }
+
+  /*Buttons*/
+  .cancel-send-buttons #cancel-button, #send-button {
+    border-radius: 10px;
+
+    margin: 7% 0 0 0;
+    padding: 0.6rem;
+
+    flex-wrap: nowrap;
+
+    font-size: 14px;
+  }
+
+  /* Calendar */
+  .calendar-main {
+    width: 80%;
+    height: 90%;
+    position: relative;
+ 
+  }
+
+  /* Informations */
+  .second-square-info-calend {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: auto;
+
+    border: 10px;
+    border-color: rgb(65, 14, 14);
+  }
+
+  .information {
+    border: 0.1rem solid rgb(98, 99, 171);
+    
+    padding: 2%;
+    width: 550px;
+  }
 
 }
