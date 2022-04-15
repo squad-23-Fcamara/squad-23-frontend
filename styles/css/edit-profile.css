@@ -162,9 +162,16 @@ header {
   }
 }
 
-#button-plus {
+.button-plus {
   margin-top: 2.3rem;
   width: 35%;
+  display: inline;
+}
+.button-plus h4 {
+  display: inline;
+}
+.button-plus .add-icon {
+  width: 2rem;
 }
 
 .calendar {
