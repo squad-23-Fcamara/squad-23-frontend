@@ -5,106 +5,184 @@
 .menu
     width: auto
     height: auto
+    z-index: 10 
 
+    // BOTÃO DO MOBILE
     #nav-btn
-        width: 4rem
-        height: 4rem
+        width: 7rem
+        height: 7rem
+        position: absolute
+        left: 6vw
         
         display: flex
+        flex-direction: column
+        align-items: left
         justify-content: center
 
-        img
-            margin: .4rem
-
+        span
+            width: 32px
+            height: 4px
+            background-color: black
+            margin: 8px
         
+        .line1, .line3
+            width: 50px
+            margin-left: 4px
+
         @include responsive-mixin.desktop
             display: none
-        
 
     #nav-menu
-        display: none
+        display: block
+        width: 70vw
+        background-color: #ccc
+        box-sizing: border-box
+        margin-top: 0
+        margin-left: -70vw
 
-        @include responsive-mixin.desktop
-            display: block
-            background-color: #ccc
+        display: flex
+        flex-direction: column
+        
+
+        .profile
+            width: 100%
+            height: 20vh
+            box-sizing: border-box
+
             display: flex
             flex-direction: column
             align-items: center
 
+            img
+                border-radius: 50%
+                width: 5rem
+                height: auto
+                margin: 2rem .3rem
+        
+        .nav
+            width: 80%
+            height: 50vh
+            margin: 0 auto
+                
+            display: flex
+            flex-direction: column
+            align-items: center
+
+            
+            &-item
+                text-align: center
+                margin-top: 1.5rem
+
+                a
+                    display: block
+                    padding: .5rem
+                    text-decoration: none
+
+
+                    // ELEMENTOS DOS MENU
+    
+
+        @include responsive-mixin.desktop
+            display: block
+            width: 40%
+            background-color: #ccc
+            display: flex
+            flex-direction: column
+            align-items: center
             height: 100%
 
-            // INFORMAÇÕES DO USUÁRIO
+            transition-duration:1s
+            transform-origin: 0% 0% 
+
+                         // INFORMAÇÕES DO USUÁRIO               
             .profile
                 width: 100%
-                height: 18rem
+                height: 15vh
                 box-sizing: border-box
 
                 display: flex
                 flex-direction: column
                 align-items: center
-                
+
                 img
                     border-radius: 50%
-                    width: 7rem
-                    height: 7rem
-                    margin: 2rem auto
+                    width: 4.5rem
+                    height: auto
+                    margin: 2rem .3rem
 
-                &-info
-                    width: auto
-                    height: auto 
-                    text-align: center
+                &-info 
+                    display: none
 
-                    a
-                        color: black
-            
-            //NAVEGADOR DAS PÁGINAS (MENU)
-            .nav  
+                        //NAVEGADOR DAS PÁGINAS (MENU)       
+            .nav
                 width: 80%
-                height: 50rem
-                margin-top: 6rem
+                height: 50vh
+                margin-top: 10vh
+                
                 display: flex
                 flex-direction: column
                 align-items: center
                 justify-content: flex-start
-                
+            
+                &-item
+                    margin: 2rem auto
+
+                    a
+                        display: block
+                        padding: .5rem
+                        text-decoration: none
+                        
+                        h4
+                            display: none
+                    
+                #nav-item-out-line
+                    margin-top: 15vh
+                                                // AÇÃO AO PASSAR O MOUSE
+    #nav-menu:hover
+        display: block
+        transition: all .5s ease-out
+
+        @include responsive-mixin.desktop
+            width: 100%
+               
+                // INFORMAÇÕES DO USUÁRIO
+            .profile
+                align-items: center
+                img
+                    width: 8rem
+
+                &-info
+                    display: block
+                    text-align: center
+
+                    a
+                        color: black
+                        margin-top: 1rem
+                    
+                             //NAVEGADOR DAS PÁGINAS (MENU)
+
+            .nav
+                height: 50vh
+                box-sizing: border-box 
+
                 a
                     display: block
-                    padding: .5rem
                     text-decoration: none
-                    color: black
+
+                    h4
+                        display: block
 
                 &-item
                     text-align: center
-                    margin: 2rem auto
 
-                    &-icon
-                        width: 100px
-                        height: 100px
-                    
+                    h4
+                        margin-top: 1rem
+
                 #nav-item-out-line
-                   margin-top: 10rem
+                    margin-top: 9vh
 
-
-    #nav-menu:hover
-        @include responsive-mixin.desktop
-        width: 40%
-
-        .profile 
-            img
-                border-radius: 50%
-                width: 80%
-                height: auto
-                margin: 2rem .3rem
-
-            &-info 
-                display: none
-
-        //NAVEGADOR DAS PÁGINAS (MENU)
-        .nav
-            a
-                h4
-                    display: none
+    .nav-menu-active
+        transform: translateX(0)
         
-
 
                 

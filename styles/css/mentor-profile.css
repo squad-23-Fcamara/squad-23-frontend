@@ -5,20 +5,50 @@ body {
   box-sizing: border-box;
 }
 
+@media (min-width: 920px) {
+  main {
+    display: grid;
+    padding: 0;
+    padding-display: grid;
+    padding-grid-template-columns: 12.8% auto;
+    padding-grid-template-rows: auto auto;
+    padding-grid-gap: 1rem;
+  }
+}
+
 .main-header .cover-image {
   display: none;
 }
 @media (min-width: 920px) {
   .main-header .cover-image {
-    display: inline;
+    display: block;
+    grid-column: 2/3;
+    grid-rows: 1/2;
   }
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+}
+@media (min-width: 920px) {
+  .menu {
+    position: relative;
+    grid-column: 1/2;
+    grid-row: 1/3;
+  }
+}
+
+section {
+  height: auto;
+  grid-column: 2/3;
+  grid-row: 2/3;
 }
 
 .mentor-profile {
   background-color: #F0EDED;
   padding: 7.7rem 3.8rem 4.2rem 3.8rem;
   border-radius: 1rem;
-  position: relative;
   box-sizing: border-box;
   width: 343px;
   height: 300px;
@@ -27,12 +57,12 @@ body {
   background-image: url(../../assets/img/profile.jfif);
   background-size: cover;
   background-position: center;
-  width: 50%;
-  border-radius: 50%;
+  width: 15rem;
   max-width: 15rem;
+  border-radius: 50%;
   height: 15rem;
+  max-height: 15rem;
   margin: 2rem;
-  position: absolute;
   top: -98px;
 }
 .mentor-profile-job-role {
