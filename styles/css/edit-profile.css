@@ -15,18 +15,25 @@ main {
 header {
   padding: 1.6rem;
   padding-bottom: 10rem;
+  width: 100vw;
+  display: flex;
+  align-items: center;
 }
 
 #logo-mobile {
   margin: 0 auto;
-  text-align: center;
-  padding-bottom: 2rem;
-  margin-bottom: 10rem;
   align-items: center;
 }
-#logo-mobile .logo-header {
-  text-align: center;
-  align-items: center;
+
+@media (min-width: 920px) {
+  #logo-menu-mobile {
+    display: none;
+  }
+}
+
+.header-logo {
+  padding-bottom: 3rem;
+  padding-top: 1rem;
 }
 
 .form-profile {
