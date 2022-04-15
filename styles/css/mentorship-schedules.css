@@ -19,10 +19,12 @@
 .main-first-larger-square {
   display: flex;
   flex-direction: column-reverse;
+  width: auto;
 }
 
 .first-square-appointment {
-  width: 100%;
+  width: auto;
+  height: auto;
 }
 
 /* First line of first square with title and subtitles */
@@ -69,10 +71,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   margin: 2%;
   border-radius: 10px;
+  
   height: auto;
   width: auto;
+  
   background-color: #A8A8D0;
 }
 
@@ -135,8 +140,8 @@
   background: rgba(254, 85, 23, 1);
 }
 
-/* Segundo quadrado do principal */
-/* Informações */
+/* Second square main */
+/* Informations */
 .second-square-info-calend {
   display: flex;
   flex-direction: column-reverse;
@@ -148,6 +153,7 @@
   border: 0.1rem solid rgb(98, 99, 171);
   margin: 20px;
   padding: 5%;
+  width: auto;
   align-items: center;
 }
 
@@ -165,6 +171,7 @@
   grid-template-columns: 12.8% auto;
   grid-template-rows: auto auto;
   grid-gap: 1rem;
+
   width: 80%;
   height: 100%;
   }
@@ -177,12 +184,7 @@
   .container-main {
     grid-column: 2/3;
     grid-row: 2/3;
-  }
-
-  .main-first-larger-square {
-    max-width: 1434px;
-    max-height: 787px;
- 
+    width: 100vw;
   }
 
   .title {
@@ -190,5 +192,113 @@
     grid-row: 1/2;
   }
 
+  .mentorship-schedule-title {
+   text-align: left;
+  }
+
+  .main-first-larger-square {
+    max-width: 1434px;
+    max-height: 787px;
+    width: auto;
+
+    display: flex;
+    flex-direction: row;
+  }
+
+  .first-square-appointment {
+    border-radius: 10px;
+    background-color: rgb(224, 224, 224);
+  }
+
+  /* Appointment list */
+  .appointment-content-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: auto;
+    
+    align-items: flex-start;
+    justify-content: left;
+
+    height: 13.5%;
+    background: #FFFFFF;
+  }
+
+  /*Legends*/
+  .appointment-list-title-legend {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .legends {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+ 
+  /*Mentorships*/
+  .appointment-list-mentor-photo {
+    width: auto;
+  }
+  
+  .appointment-list-mentor-photo img {
+    height: 70px;
+    width: 70px;
+  
+    margin: 1rem 1.5rem;
+  }
+
+  .appointment-list-mentor-photo h2, h4 {
+    margin-block: 0;
+    margin: 0 0.1rem;
+  }
+
+  .date-hour {
+    display: inline-flex;
+    justify-content: center;
+  
+    height: auto;
+  }
+
+  /*Buttons*/
+  .cancel-send-buttons {
+    
+  }
+  
+  .cancel-send-buttons #cancel-button, #send-button {
+    margin: 7% 0 0 0;
+    font-size: 14px;
+    padding: 0.6rem;
+    border-radius: 10px;
+    flex-wrap: nowrap;
+  }
+
+  /* Calendar */
+  .calendar-main {
+    width: 80%;
+    height: 90%;
+    position: relative;
+ 
+  }
+
+  /* Informations */
+  .second-square-info-calend {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: auto;
+
+    border: 10px;
+    border-color: rgb(65, 14, 14);
+  }
+
+  .information {
+    border: 0.1rem solid rgb(98, 99, 171);
+    
+    padding: 2%;
+    width: 550px;
+  }
 
 }
