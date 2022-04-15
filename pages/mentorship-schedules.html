@@ -15,9 +15,64 @@
 
 <body>
 
+<!-- ASIDE MENU -->
+
+<aside class="menu">
+
+<!-- BUTTON USED ON MOBILE -->
+<div id="nav-btn">
+  <img src="./assets/icons/aside-mobile-icon.svg" alt="">
+</div>
+
+<div id="nav-menu">
+  <!-- PROFILE USER -->
+  <div class="profile">
+    <div class="profile-image">
+      <img src="./assets/img/perfil mulher.jpg" alt="">
+    </div>
+
+    <div class="profile-info">
+      <h3>Cristina Martins</h3>
+      <h2> <a href="#">Editar perfil</a></h2>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <nav class="nav">
+
+    <!-- MENU ITEMS -->
+    <div class="nav-item">
+      <a href="#">
+        <img src="./assets/icons/home-page-icon.svg" alt="">
+        <h4>Página Inicial</h4>
+      </a>
+    </div>
+
+    <div class="nav-item">
+      <a href="#">
+        <img src="./assets/icons/schedule-icon.svg" alt="">
+        <h4>Meus agendamentos</h4>
+      </a>
+    </div>
+
+    <div class="nav-item">
+      <a href="#">
+        <img src="./assets/icons/profile-icon.svg" alt="">
+        <h4>Perfil</h4>
+      </a>
+    </div>
+
+    <div class="nav-item" id="nav-item-out-line">
+      <a href="#">
+        <img src="./assets/icons/out-line-icon.svg" alt="">
+        <h4>Sair</h4>
+      </a>
+    </div>
+  </nav>
+</div>
+
 <aside class="body-main">
   <h2 class="mentorship-schedule-title font28">Meus agendamentos</h2>
-  <hr class="divider">
   <div class="main-first-larger-square">
     <div class="first-square-appointment">
       <section class="appointment-list-title-legend">
@@ -34,24 +89,25 @@
         </div>
       </section>
       <section class="appointment-content-list">
-        <article class="appointment-list">
-          <div class="appointment-list-mentor-photo">
+        
+          <article class="appointment-list-mentor-photo">
             <img class="mentor-photo" src="../assets/img/perfil mulher.jpg"></img>
-            <h2>Guilherme Lima</h2>
-            <h4>Desenvolvedor Sênior</h4>
-          </div>
-        </article>
-        <article class="appointment-list">
-          <div class="date-hour">
-            <div id="date">DATA</div>
-            <div id="hour">HORA</div>
-          </div>
-        </article>
-        <article class="appointment-list">
-          <div class="cancel-send-buttons">
+            <div>
+              <h2>Guilherme Lima</h2>
+              <h4>Desenvolvedor Sênior</h4>
+            </div>
+          </article>
+        
+        
+          <article class="date-hour">
+            <div id="date">Data: 20/04/2022</div>
+            <div id="hour">Hora: 09h às 10h</div>
+          </article>
+        
+          <article class="cancel-send-buttons">
             <button id="cancel-button">Cancelar mentoria</button>
             <button id="send-button">Enviar mensagem</button>
-          </div>
+          </article>
         </article>
       </section>
     </div>
