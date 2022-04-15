@@ -13,10 +13,10 @@
 
 .mentorship-schedule-title {
   text-align: center;
+  text-align: top;
 }
 
 .main-first-larger-square {
-  border-color: rgb(65, 14, 14);
   display: flex;
   flex-direction: column-reverse;
 }
@@ -27,7 +27,6 @@
 
 /* First line of first square with title and subtitles */
 .appointment-list-title-legend {
-  background-color: blue;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -39,7 +38,6 @@
 }
 
 .legends {
-  background-color: rgb(0, 255, 136);
   max-width: 343px;
   max-height: 248px;
   height: auto;
@@ -61,8 +59,8 @@
   width: 12px;
   height: 12px;
   border-radius: 50%; 
-  background-color: red;
   margin: 0 0.3rem 0 0;
+  background-color: rgb(254, 85, 23);
 }
 
 /* Second line of first square with title and subtitles */
@@ -71,10 +69,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 2%;
   border-radius: 10px;
   height: auto;
   width: auto;
-  background-color: rgb(233, 214, 214);
+  background-color: #A8A8D0;
 }
 
 .appointment-list-mentor-photo {
@@ -142,13 +141,21 @@
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
+  justify-content: center;
 }
 
 .information {
   border: 0.1rem solid rgb(98, 99, 171);
+  margin: 20px;
+  padding: 5%;
+  align-items: center;
 }
 
 /* Calendário */
+.calendar-main {
+  width: auto;
+  height: auto;
+}
 
 /*------------ DESKTOP ------------*/
 
@@ -167,11 +174,9 @@
     grid-row: 1/3;
   }
 
-  
   .container-main {
     grid-column: 2/3;
     grid-row: 2/3;
-    background-color: brown;
   }
 
   .main-first-larger-square {

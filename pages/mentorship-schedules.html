@@ -12,68 +12,73 @@
   <link rel="stylesheet" type="text/css" href="../styles/css/style-aside.css"/>
   <link rel="stylesheet" type="text/css" href="../styles/css/style-index.css"/>
 
+  <!--Calendar-->
+  <link rel="stylesheet" type="text/css" href="../styles/css/calendar/evo-calendar.midnight-blue.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../styles/css/calendar/evo-calendar.min.css"/>
+
+
   <title></title>
 </head>
 
 <body>
-
-  
+ 
 <section class="body-main">
-   <!-- ASIDE MENU -->
-  <aside id="menu">
 
-    <!-- BUTTON USED ON MOBILE -->
-    <div id="nav-btn">
-      <img src="../assets/icons/aside-mobile-icon.svg" alt="">
-    </div>
-    
-    <div id="nav-menu">
+    <!-- ASIDE MENU -->
+
+    <aside id="menu">
+            
+      <!-- BUTTON USED ON MOBILE -->
+  <div class="navBtn" id="Btn"></div>
+
+  <div class="nav-menu">  
       <!-- PROFILE USER -->
       <div class="profile">
-        <div class="profile-image">
-          <img src="../assets/img/perfil mulher.jpg" alt="">
-        </div>
-    
-        <div class="profile-info">
-          <h3>Cristina Martins</h3>
-          <h2> <a href="#">Editar perfil</a></h2>
-        </div>
+          <div class="profile-image">
+              <img src="./assets/img/perfil mulher.jpg" alt="">
+          </div>
+
+          <div class="profile-info">
+              <h3>Cristina Martins</h3>
+          </div>
       </div>
-    
+
       <!-- NAV -->
       <nav class="nav">
-    
-        <!-- MENU ITEMS -->
-        <div class="nav-item">
+
+          <!-- MENU ITEMS -->
+      <div class="nav-item">
           <a href="#">
-            <img src="../assets/icons/home-page-icon.svg" alt="">
-            <h4>Página Inicial</h4>
+            <img src="./assets/icons/home-page-icon.svg" alt="">
+              <h4>Página Inicial</h4> 
           </a>
-        </div>
-    
-        <div class="nav-item">
+      </div> 
+
+      <div class="nav-item">            
           <a href="#">
-            <img src="../assets/icons/schedule-icon.svg" alt="">
-            <h4>Meus agendamentos</h4>
+            <img src="./assets/icons/schedule-icon.svg" alt="">  
+              <h4>Meus agendamentos</h4> 
           </a>
-        </div>
-    
-        <div class="nav-item">
+      </div>
+
+      <div class="nav-item">            
           <a href="#">
-            <img src="../assets/icons/profile-icon.svg" alt="">
-            <h4>Perfil</h4>
+            <img src="./assets/icons/profile-icon.svg" alt="">
+              <h4>Perfil</h4> 
           </a>
-        </div>
-    
-        <div class="nav-item" id="nav-item-out-line">
+      </div>
+
+      <div class="nav-item" id="nav-item-out-line">            
           <a href="#">
-            <img src="../assets/icons/out-line-icon.svg" alt="">
-            <h4>Sair</h4>
+            <img src="./assets/icons/out-line-icon.svg" alt=""> 
           </a>
-        </div>
-      </nav>
-    </div>
-  </aside>
+      </div>
+  </div>
+
+  </nav>
+  
+</aside>
+ 
   <div class="title">
     <h2 class="mentorship-schedule-title font28">Meus agendamentos</h2>
   </div>
@@ -81,7 +86,7 @@
     <div class="main-first-larger-square">
       <div class="first-square-appointment">
         <section class="appointment-list-title-legend">
-          <h3 class="scheduled-mentorships font26">Mentorias marcadas</h3>
+          <h2 class="scheduled-mentorships font26">Mentorias marcadas</h2>
           <div class="legends">
             <div class="content-legend">
               <figure class="circle"></figure>
@@ -120,14 +125,17 @@
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia odio nam voluptatibus cum sit, placeat maiores debitis facilis rerum veritatis necessitatibus molestias doloremque velit, ratione officia voluptatum adipisci corporis error?</p>
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati dolores suscipit, architecto sequi odio ad adipisci ex exercitationem a itaque blanditiis enim, saepe at nesciunt rerum ullam. Debitis, beatae atque!</p>
         </article>
-        <article class="calendar">
-          <h3>calendario</h3>
+        <article class="calendar-main">
+          <div id="calendar"></div>
         </article>
       </section>
     </div>
   </main>
 </section>
 
-
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script src="../scripts/calendar/evo-calendar.min.js"></script>
+<script src="../scripts/calendar/initialized-calendar.js"></script>
+<script src="../scripts/calendar/calendar-event.js"></script>
 </body>
 </html>
