@@ -40,14 +40,16 @@
 }
 
 .legends {
-  max-width: 343px;
-  max-height: 248px;
-  height: auto;
-  width: auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
+
+  max-width: 343px;
+  max-height: 248px;
+  height: auto;
+  width: auto;
+  
 }
 
 .content-legend {
@@ -214,7 +216,7 @@
   .appointment-content-list {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     width: auto;
     
     align-items: flex-start;
@@ -234,6 +236,7 @@
   .legends {
     display: flex;
     flex-direction: row;
+
     justify-content: center;
     align-items: center;
   }
@@ -263,16 +266,15 @@
   }
 
   /*Buttons*/
-  .cancel-send-buttons {
-    
-  }
-  
   .cancel-send-buttons #cancel-button, #send-button {
-    margin: 7% 0 0 0;
-    font-size: 14px;
-    padding: 0.6rem;
     border-radius: 10px;
+
+    margin: 7% 0 0 0;
+    padding: 0.6rem;
+
     flex-wrap: nowrap;
+
+    font-size: 14px;
   }
 
   /* Calendar */
