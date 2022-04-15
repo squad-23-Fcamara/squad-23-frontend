@@ -1,27 +1,3 @@
-class NavMobile {
-    constructor (btnMenu, navMenu, nav) {
-        this.btnMenu = document.querySelector(btnMenu);
-        this.navMenu = document.querySelector(navMenu);
-        this.nav = document.querySelectorAll(nav);
-        this.activeCl = "active";
-    }
+const $navBtn = document.querySelector('.navBtn');
 
-addClickEvent() {
-    this.btnMenu.addEventListener("click", () => console.log ("Hey cara"));
-}
-
-    init() {
-        if(this.btnMenu){
-            this.addClickEvent();
-        }
-        return this;
-    }
-}
-
-const NavMobileBar = new NavMobile(
-    ".btnMenu",
-    ".navMenu",
-    ".nav",
-);
-
-NavMobileBar.init();
+console.log($navBtn)
