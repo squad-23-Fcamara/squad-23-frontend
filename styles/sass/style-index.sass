@@ -1,5 +1,6 @@
 @use 'mixins'
 @use 'responsive-mixin'
+@use 'colors'
 
 /* MOBILE */
 body
@@ -20,17 +21,15 @@ body
         grid-gap: 1rem
 
     .research
-        border: 1px solid blue
         width: 100%
         height: 11rem
-        width: 1005
+        width: 100%
         
         display: flex
         flex-direction: column
         align-items: center
 
         @include responsive-mixin.desktop
-            border: 1px solid blue
 
             grid-column: 2 / 3
             grid-rows: 1 / 2
@@ -45,15 +44,25 @@ body
             align-items: center
             justify-content: space-between
 
+            &-select
+                @include mixins.SecStyle
+
             &-filter
                 display: flex
                 width: 77.5%
                 height: 100%
                 justify-content: space-between
                 align-items: center
+                
 
                 &-input
                     width: 20rem
+                    @include mixins.SecStyle
+                    margin-left: 2%
+                
+                button
+                    @include mixins.primStyle
+
         
         .logo 
             width: 100%
@@ -111,11 +120,10 @@ body
 
                 &-name
                     font-size: 20px
-                    margin-top: .5rem
-                    margin-bottom: .7rem
+                    margin: .5rem 0 .7rem .7rem
                 
                 h4
-                    margin-bottom: .3rem
+                    margin: 0 0 .7rem .7rem
                 
                 @include responsive-mixin.desktop
                     max-width: 462px
@@ -130,8 +138,7 @@ body
                     border-radius: .6rem .6rem 0 0
                     background-image: url("/assets/img/perfil mulher.jpg")
                     background-position: center
-                    background-repeat: no-repeat
-                    background-size: 24rem
+                    background-repeat: no-repeat center center
                     background-size: cover
                     box-sizing: border-box
                     overflow: hidden
@@ -143,35 +150,29 @@ body
                     &-specialty
                         display: flex
                         flex-flow: row wrap
+
                     
                     &-specialty h4  
                         display: block
-                        padding: .5rem
-                        background-color: #bbb
-                        margin: .5rem
-                        border-radius: .5rem
-                        box-shadow: 1px 1px 3px 
+                        @include mixins.speciality
+                        
+                        
                 
                 &-btn
-                    background-color: #000
-                    width: 9.7rem
-                    height: 2.8rem
-                    border-radius: 10px
-                    color: white
-                    margin: 2.2rem auto
+                   @include mixins.primStyle                   
+                    
+
 
 
         //DESKTOP
     @include responsive-mixin.desktop
 
         .research
-            border: 1px solid blue
 
             grid-column: 2 / 3
             grid-rows: 1 / 2
 
         .main
-            border: 1px solid red 
             height: auto 
 
             grid-column: 2 / 3
@@ -187,5 +188,4 @@ body
                 flex-wrap: wrap
 
                 &-header
-                    border: 1px solid black
                     height: 3rem
