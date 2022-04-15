@@ -1,1 +1,0 @@
-sass --watch sass/style-aside.sass:css/style-aside.css
