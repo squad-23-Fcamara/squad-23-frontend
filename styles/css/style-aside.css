@@ -22,7 +22,7 @@
 #menu .nav-menu {
   display: block;
   width: 70vw;
-  background-color: #ccc;
+  background-color: #36357E;
   box-sizing: border-box;
   transform: translateX(-100%);
   transition: transform 0.4s ease-in;
@@ -33,6 +33,7 @@
   width: 100%;
   height: 20vh;
   box-sizing: border-box;
+  color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -59,12 +60,13 @@
   display: block;
   padding: 0.5rem;
   text-decoration: none;
+  color: white;
 }
 @media (min-width: 920px) {
   #menu .nav-menu {
     display: block;
     width: 40%;
-    background-color: #ccc;
+    background-color: #36357E;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -93,30 +95,36 @@
   }
   #menu .nav-menu .nav {
     width: 80%;
-    height: 50vh;
+    height: 65vh;
     margin-top: 15vh;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
   }
   #menu .nav-menu .nav-item {
-    margin: 2rem auto;
+    box-sizing: border-box;
+  }
+  #menu .nav-menu .nav-item img {
+    width: 100%;
+    height: auto;
   }
   #menu .nav-menu .nav-item a {
     display: block;
     padding: 0.5rem;
     text-decoration: none;
+    margin-top: 3;
   }
   #menu .nav-menu .nav-item a h4 {
     display: none;
   }
   #menu .nav-menu .nav #nav-item-out-line {
-    margin-top: 15vh;
+    margin-top: 8rem;
   }
   #menu .nav-menu:hover {
     display: block;
-    transition: all 0.5s ease-out;
+    transition: all 0.9s ease-out;
   }
 }
 @media (min-width: 920px) and (min-width: 920px) {
@@ -134,7 +142,7 @@
     text-align: center;
   }
   #menu .nav-menu:hover .profile-info a {
-    color: black;
+    color: white;
     margin-top: 1rem;
   }
   #menu .nav-menu:hover .nav {
@@ -158,8 +166,18 @@
   #menu .nav-menu:hover .nav-item h4 {
     margin-top: 1rem;
   }
+  #menu .nav-menu:hover .nav #nav-item-profile {
+    width: 100%;
+    height: auto;
+  }
+  #menu .nav-menu:hover .nav #nav-item-profile a img {
+    width: 4.5rem;
+    height: auto;
+  }
   #menu .nav-menu:hover .nav #nav-item-out-line {
     margin-top: 9vh;
+    width: 100%;
+    height: auto;
   }
 }
 #menu .nav-menu-open {

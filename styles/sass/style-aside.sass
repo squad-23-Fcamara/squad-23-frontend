@@ -1,4 +1,6 @@
 @use 'responsive-mixin'
+@use 'colors'
+@use 'mixins'
 //MENU LATERAL E PERFIL DO USUÁRIO
 
 
@@ -30,7 +32,7 @@
     .nav-menu
         display: block
         width: 70vw
-        background-color: #ccc
+        background-color: colors.$secondary
         box-sizing: border-box
         transform: translateX(-100%)
         transition: transform 0.4s ease-in
@@ -43,6 +45,7 @@
             width: 100%
             height: 20vh
             box-sizing: border-box
+            color: white
 
             display: flex
             flex-direction: column
@@ -71,12 +74,13 @@
                 a
                     display: block
                     padding: .5rem
-                    text-decoration: none    
+                    text-decoration: none 
+                    color: white   
 
         @include responsive-mixin.desktop
             display: block
             width: 40%
-            background-color: #ccc
+            background-color: colors.$secondary
             display: flex
             flex-direction: column
             align-items: center
@@ -109,8 +113,9 @@
                         //NAVEGADOR DAS PÁGINAS (MENU)       
             .nav
                 width: 80%
-                height: 50vh
+                height: 65vh
                 margin-top: 15vh
+                box-sizing: border-box
                 
                 display: flex
                 flex-direction: column
@@ -118,22 +123,27 @@
                 justify-content: flex-start
             
                 &-item
-                    margin: 2rem auto
+                    box-sizing: border-box
+                    img
+                        width: 100%
+                        height: auto
 
                     a
                         display: block
                         padding: .5rem
                         text-decoration: none
+                        margin-top: 3
                         
                         h4
                             display: none
-                    
+                            
                 #nav-item-out-line
-                    margin-top: 15vh
-                                                // AÇÃO AO PASSAR O MOUSE
+                    margin-top: 8rem
+                                                
+                            // AÇÃO AO PASSAR O MOUSE
             &:hover
                 display: block
-                transition: all .5s ease-out
+                transition: all .9s ease-out
 
                 @include responsive-mixin.desktop
                     width: 100%
@@ -149,7 +159,7 @@
                             text-align: center
 
                             a
-                                color: black
+                                color: white
                                 margin-top: 1rem
                             
                                     //NAVEGADOR DAS PÁGINAS (MENU)
@@ -161,12 +171,14 @@
                         a
                             display: block
                             text-decoration: none
+                            
 
                             h4
-                                display: block
+                                display: block                                
 
                         &-item
                             text-align: center
+                            
 
                             img
                                 width: 50%
@@ -174,9 +186,21 @@
 
                             h4
                                 margin-top: 1rem
+                                
+                        
+                        #nav-item-profile
+                            width: 100%
+                            height: auto
+                            a
+                                img
+                                    width: 4.5rem
+                                    height: auto
 
                         #nav-item-out-line
                             margin-top: 9vh
+                            width: 100%
+                            height: auto
+                            
         &-open
             transform: translateX(0)    
 
