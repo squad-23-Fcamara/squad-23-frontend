@@ -12,13 +12,12 @@ body {
   .grid-main {
     padding: 0;
     display: grid;
-    grid-template-columns: 12.8% auto;
+    grid-template-columns: 12.8% 78.8%;
     grid-template-rows: auto auto;
     grid-gap: 1rem;
   }
 }
 .grid-main .research {
-  border: 1px solid blue;
   width: 100%;
   height: 11rem;
   width: 100%;
@@ -28,13 +27,67 @@ body {
 }
 @media (min-width: 920px) {
   .grid-main .research {
-    border: 1px solid blue;
     grid-column: 2/3;
     grid-rows: 1/2;
   }
 }
 .grid-main .research-search {
   width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.grid-main .research-search-select {
+  border: 2px solid #36357E;
+  border-radius: 10px;
+  height: 50px;
+}
+.grid-main .research-search-filter {
+  display: flex;
+  width: 77.5%;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.grid-main .research-search-filter-input {
+  width: 20rem;
+  border: 2px solid #36357E;
+  border-radius: 10px;
+  height: 50px;
+  margin-left: 2%;
+}
+.grid-main .research-search-filter button {
+  height: 50px;
+  color: white;
+  width: 9.7rem;
+  background-color: #FE5517;
+  margin: 2.2rem auto;
+  border-radius: 10px;
+  margin: 0;
+}
+.grid-main .research #sjmentor {
+  margin: 0;
+  border: 2px solid #FE5517;
+  width: 9.7rem;
+  height: 50px;
+  border-radius: 10px;
+  background-color: transparent;
+}
+.grid-main .research .logo {
+  width: 100%;
+  height: 50%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.grid-main .research .logo-img {
+  background-image: url("../../assets/icons/logo.svg");
+  background-repeat: no-repeat center center;
+  width: 261px;
+  height: 75px;
 }
 .grid-main #menu {
   position: absolute;
@@ -50,6 +103,7 @@ body {
 .grid-main .main {
   width: 100%;
   height: auto;
+  margin-right: 8.4%;
 }
 .grid-main .main .mentors {
   height: auto;
@@ -72,11 +126,10 @@ body {
 }
 .grid-main .main .mentors-card-name {
   font-size: 20px;
-  margin-top: 0.5rem;
-  margin-bottom: 0.7rem;
+  margin: 0.5rem 0 0.7rem 0.7rem;
 }
 .grid-main .main .mentors-card h4 {
-  margin-bottom: 0.3rem;
+  margin: 0 0 0.7rem 0.7rem;
 }
 @media (min-width: 920px) {
   .grid-main .main .mentors-card {
@@ -92,8 +145,8 @@ body {
   border-radius: 0.6rem 0.6rem 0 0;
   background-image: url("/assets/img/perfil mulher.jpg");
   background-position: center;
-  background-repeat: no-repeat;
-  background-size: 24rem;
+  background-repeat: no-repeat center center;
+  background-size: cover;
   box-sizing: border-box;
   overflow: hidden;
 }
@@ -107,28 +160,26 @@ body {
 }
 .grid-main .main .mentors-card-description-specialty h4 {
   display: block;
-  padding: 0.5rem;
-  background-color: #bbb;
-  margin: 0.5rem;
+  border: 2px solid #36357E;
   border-radius: 0.5rem;
+  margin: 0.5rem;
   box-shadow: 1px 1px 3px;
+  padding: 0.5rem;
 }
 .grid-main .main .mentors-card-btn {
-  background-color: #000;
-  width: 9.7rem;
-  height: 2.8rem;
-  border-radius: 10px;
+  height: 50px;
   color: white;
+  width: 9.7rem;
+  background-color: #FE5517;
   margin: 2.2rem auto;
+  border-radius: 10px;
 }
 @media (min-width: 920px) {
   .grid-main .research {
-    border: 1px solid blue;
     grid-column: 2/3;
     grid-rows: 1/2;
   }
   .grid-main .main {
-    border: 1px solid red;
     height: auto;
     grid-column: 2/3;
     grid-row: 2/3;
@@ -141,7 +192,6 @@ body {
     flex-wrap: wrap;
   }
   .grid-main .main .mentors-header {
-    border: 1px solid black;
     height: 3rem;
   }
 }
