@@ -17,11 +17,23 @@ function userInfo() {
   container.appendChild(wrapper)
 }
 
+async function handleCancelMentoring(id) {
+  const response = await axios.delete(
+    `https://squad23-api.herokuapp.com/schedule/delete/${id}`
+  )
+
+  console.log(response.data)
+
+  window.alert('Mentoria excluída')
+  window.location.reload()
+}
+
 function userMentorings(schedule, id) {
   const mentoringId = id
   const mentoringsInfo = document.getElementById('mentorings')
-  const date = document.createElement('div')
-  const hour = document.createElement('div')
+  const wrapper = document.createElement('div')
+  const date = document.createElement('p')
+  const hour = document.createElement('p')
 
   date.textContent = new Intl.DateTimeFormat('pt-BR', {
     day: 'numeric',
@@ -35,8 +47,29 @@ function userMentorings(schedule, id) {
     timeZone: 'UTC'
   }).format(new Date(schedule))
 
-  mentoringsInfo.appendChild(date)
-  mentoringsInfo.appendChild(hour)
+  wrapper.appendChild(date)
+  wrapper.appendChild(hour)
+  mentoringsInfo.appendChild(wrapper)
+  wrapper.className = 'date-time-wrapper'
+
+  const buttonWrapper = document.createElement('div')
+  const cancelButton = document.createElement('button')
+  const messageButton = document.createElement('button')
+  buttonWrapper.className = 'cancel-send-buttons'
+  cancelButton.id = 'cancel-button'
+  messageButton.id = 'send-button'
+
+  cancelButton.textContent = 'Cancelar mentoria'
+  messageButton.textContent = 'Enviar mensagem'
+
+  cancelButton.onclick = () => {
+    handleCancelMentoring(mentoringId)
+  }
+
+  buttonWrapper.appendChild(cancelButton)
+  buttonWrapper.appendChild(messageButton)
+
+  wrapper.appendChild(buttonWrapper)
 }
 
 async function fetchUser() {
@@ -46,10 +79,10 @@ async function fetchUser() {
 
   user = response.data
 
-  console.log(user)
-
   userInfo()
-  user.mentorings.map(mentoring => userMentorings(mentoring.schedule_to))
+  user.mentorings.map(mentoring =>
+    userMentorings(mentoring.schedule_to, mentoring.id)
+  )
 }
 
 fetchUser()
