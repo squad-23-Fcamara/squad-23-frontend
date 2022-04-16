@@ -17,12 +17,10 @@ header {
   padding-bottom: 10rem;
   width: 100vw;
   display: flex;
-  align-items: center;
 }
 
 #logo-mobile {
   margin: 0 auto;
-  align-items: center;
 }
 
 @media (min-width: 920px) {
@@ -34,6 +32,8 @@ header {
 .header-logo {
   padding-bottom: 3rem;
   padding-top: 1rem;
+  text-align: center;
+  align-items: center;
 }
 
 .form-profile {
@@ -302,6 +302,11 @@ header {
 
 button::hover {
   cursor: pointer;
+}
+
+.container-grid {
+  display: grid;
+  grid-template-columns: 10% 90%;
 }
 
 /*# sourceMappingURL=edit-profile.css.map */
