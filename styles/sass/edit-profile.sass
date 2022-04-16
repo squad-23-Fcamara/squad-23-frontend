@@ -1,9 +1,13 @@
+@use 'colors'
+@use 'responsive-mixin'
+   
 * 
    box-sizing: border-box
 
 body
    font-family: 'Montserrat', sans-serif
    font-weight: 500
+   color: colors.$black-blue
 
 main 
    padding: 1.6rem
@@ -11,21 +15,36 @@ main
 header
    padding: 1.6rem
    padding-bottom: 10rem
+   width: 100vw
+   display: flex
+   align-items: center
+
    
-   .logo-header
-      text-align: center 
-      align-items: center
+#logo-mobile
+   margin: 0 auto
+   align-items: center
+
+#logo-menu-mobile
+   @include responsive-mixin.desktop
+      display: none
+
+.header-logo
+   padding-bottom: 3rem
+   padding-top: 1rem
 
 .form-profile
-   background-color: #E5E5E5
+   background-color: colors.$secondary-7
    display: flex
    flex-direction: column
    justify-content: center
    border-radius: 1rem
    width: 100%
 
+   @include responsive-mixin.desktop
+      background-color: white
+
    &-image 
-      background-image: url(../../assets/img/profile.jfif)
+      background-image: url("../../assets/img/perfil mulher.jpg")
       background-size: cover
       background-position: center  
       width: 50%
@@ -41,10 +60,23 @@ header
       padding-top: 1.6rem
       margin-top: 10rem
 
+   #profile-informations
+      padding-top: 1rem 
+      padding-bottom: 1rem
+      text-align: center
+      @include responsive-mixin.mobile
+         display: none
+      	
    .label-input
       margin-top: 2.5rem
       width: 100%
       padding: 0 2rem
+
+   .double-input
+      display: grid
+      grid-template-columns: 60% 38%
+      column-gap: 2%
+
 
    input 
       display: block
@@ -67,18 +99,31 @@ header
       border-radius: 1rem
       margin: 2.2rem auto 2rem auto
       padding: 1rem 3.4rem
-      background-color: #5B5B5B
+      background-color: colors.$primary
       color: white
-      border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133))
+      width: 20rem
+      height: 5rem
+
+   // === GRID DESKTOP ===
+
+.main-grid
+   @include responsive-mixin.desktop
+      display: grid
+      grid-template-columns: 33% 33% 33%
 
 .open-button
-   background-color: #E5E5E5
+   background-color: colors.$secondary
+   color: white
    text-align: left
    margin:2.4rem 0
    border-radius: 1rem
    padding-top: .9rem 
    padding-bottom: .9rem
    padding-left: 1.6rem
+
+   @include responsive-mixin.desktop
+      text-align: center
+
 
 #mentor-panel
    //margin-bottom: 10rem
@@ -87,26 +132,38 @@ header
    width: 100%
    align-items: center
    margin: 0 auto
+
+   @include responsive-mixin.desktop
+      width: 100%
+      display: grid
+      grid-template-columns: 60% 38%
+      column-gap: 2%
    
 .opened-topic
    padding: 1rem
    width: 168px
    display: inline-block
-   border: 1px solid black
+   border: 1px solid colors.$primary
    border-radius: 1rem
    margin: 0 auto
+   color: colors.$black-blue
+   margin-bottom: 2rem
+   margin-right: 2rem
 
-.first-line
-   margin: 0 auto
-   margin-bottom: 1rem 
 
-   .second-line
-      align-items: center
-      margin: 0 auto
+   @include responsive-mixin.mobile
+      width: 130px
 
-#button-plus
+.button-plus
    margin-top: 2.3rem
    width: 35%
+   display: inline
+
+   h4
+      display: inline
+
+   .add-icon
+      width: 2rem
 
 .calendar
    height: 300px 
@@ -119,11 +176,16 @@ header
       padding-bottom: 2rem
       
    .planning-warning
-      background-color: #d1cfcf
+      background-color: colors.$secondary-7
+      color: colors.$black-blue
       padding: 2.5rem 5rem
       border-radius: 1rem
       height: 144px
       margin-top: 1.6rem
+
+      @include responsive-mixin.desktop
+         width: 78rem
+         margin: 0 auto
 
       &-title
          text-align: center
@@ -135,21 +197,48 @@ header
 
 #schedule-title
    font-width: 600
-   padding-top: 3rem
+   padding-top: 6rem
+   font-weight: 600
+   text-align: center
+
+   &-description 
+      text-align: center
+      padding-top: 1rem
+      padding-bottom: 2rem
+
+      @include responsive-mixin.mobile
+         display: none
+
 
 .schedule-date-hour
-   background-color: #EEEEEE
-   margin: 2rem 0 3.6rem 0
-   padding: 1.5rem .7rem
+   background-color: colors.$secondary-7
+   margin: 2rem 0 3.6rem 0rem 
+   padding: 1.5rem .7rem 0rem .7rem
    border-radius: 1rem
+
+   @include responsive-mixin.desktop
+      display: grid
+      grid-template-columns: 49% 49%
+      column-gap: 2%
+      margin: 0 auto
+      width: 78rem
+
    input 
       display: block
-      padding: 1.3rem 1.2rem
+      padding: 1.3rem 1.2rem 1.2rem 1.2rem
       border: 1px solid #716C6C
       border-radius: .6rem
       margin-top:.5rem
+      margin-bottom: .5rem
       width: 100%
 
+   .schedule-time
+      padding: 1rem
+      border-sizing: border-box
+
+   .schedule-date
+      padding: 1rem
+      border-sizing: border-box
 
    .schedule-date
       margin-bottom: 3.5rem
@@ -159,28 +248,37 @@ header
    padding-bottom: 10rem
 
    h3
-      padding-bottom: 2.2rem
+
+      padding: 2.5rem 0
 
    .mentor-platforms
       padding-bottom: 4rem
 
+      img
+         padding: 2rem
+
+         ::hover
+            cursor: pointer
+         
+
    #confirm-button
       padding: 1.35rem 2.35rem
       border-radius: 1rem
-      background-color:#EEEEEE
+      background-color: colors.$gray-5
+      color: colors.$gray-3
       border: none
 
 
 .footer
    margin: 0
    width: 100%
-   background-color: #b1aaaa
+   background-color: colors.$primary
    text-align: center
    padding-top: .6rem
    padding-bottom: .6rem
    
    #top-page
-      color: black
+      color: white
 
-
-      
+button::hover
+   cursor: pointer
