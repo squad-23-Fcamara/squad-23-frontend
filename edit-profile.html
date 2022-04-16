@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-     <!--Fonts-->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+   <!--Fonts-->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet">
 
-  <!--Styles-->
+   <!--Styles-->
    <link rel="stylesheet" href="./styles/css/reset.css">
    <link rel="stylesheet" href="./styles/css/style-aside.css">
    <link rel="stylesheet" href="./styles/css/edit-profile.css">
@@ -19,155 +22,230 @@
 
    <title></title>
 </head>
+
 <body>
-   <header class="header">
-      <img class="header-logo" id="logo-menu-mobile" src="../../assets/icons/menu-icon.svg" alt="menu para acesso de funcionalidades">
-      <img class="header-logo" id="logo-mobile" src="../../assets/icons/logo-mobile.svg" alt="Logo do app Technical Share: um foguete laranja com escrita em azul escuro">
-   </header>
-   <main>
-      <form class="form-profile">
 
-         <i class="bi bi-linkedin"></i>
-         <div class="form-profile-image"></div>
+   <div class="container-grid">
 
-         <a id="change-photo" href="#">Alterar foto</a>
+      <div class="container-1">
+         <!-- ASIDE MENU -->
 
-         <div class="open-button font18" id="profile-informations">
-            <h2>Informações do perfil</h2>
-         </div>
-         
-         <div class="main-grid">
+         <aside id="menu">
 
-            <div class="column-1">
-               <div class="label-input">
-                  <label class="form-profile-label font14" for="name">Nome</label>
-                  <input type="text"id="name" placeholder="Cristina Martins" required>
-               </div>
-      
-               <div class="label-input">
-                  <label class="form-profile-label font14" for="email">Email</label>
-                  <input type="email" id="email" placeholder="cristinamartins@fcamara.com" required>
-               </div>
-      
-               <div class="label-input">
-                  <label class="form-profile-label font14" for="education">Formação</label>
-                  <input type="text" id="education">
-                  <input type="text" id="education">
-               </div>
-            </div>
-   
-            <div class="column-2">
-               <div class="label-input double-input">
-                  <div>
-                     <label class="form-profile-label font14" for="job-role">Cargo</label>
-                     <input type="text" id="job-role" placeholder="UX Designer" required>
+            <!-- BUTTON USED ON MOBILE -->
+            <div class="navBtn" id="Btn"></div>
+
+            <div class="nav-menu">
+               <!-- PROFILE USER -->
+               <div class="profile">
+                  <div class="profile-image">
+                     <img src="./assets/img/perfil mulher.jpg" alt="">
                   </div>
-      
-                  <div>
-                     <label class="form-profile-label font14" for="seniority">Senioridade</label>
-                     <input type="text" id="seniority" placeholder="Junior" required>
+
+                  <div class="profile-info">
+                     <h3>Cristina Martins</h3>
                   </div>
                </div>
-      
-               <div class="label-input">
-                  <label class="form-profile-label font14" for="about">Sobre mim</label>
-                  <input id="about" placeholder="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.">
+
+               <!-- NAV -->
+               <nav class="nav">
+
+                  <!-- MENU ITEMS -->
+                  <div class="nav-item">
+                     <a href="#">
+                        <img src="./assets/icons/home-page-icon.svg" alt="">
+                        <h4>Página Inicial</h4>
+                     </a>
+                  </div>
+
+                  <div class="nav-item">
+                     <a href="#">
+                        <img src="./assets/icons/schedule-icon.svg" alt="">
+                        <h4>Meus agendamentos</h4>
+                     </a>
+                  </div>
+
+                  <div class="nav-item" id="nav-item-profile">
+                     <a href="#">
+                        <img src="./assets/icons/profile-icon.svg" alt="">
+                        <h4>Perfil</h4>
+                     </a>
+                  </div>
+
+                  <div class="nav-item" id="nav-item-out-line">
+                     <a href="#">
+                        <img src="./assets/icons/out-line-icon.svg" alt="">
+                     </a>
+                  </div>
+            </div>
+
+            </nav>
+
+         </aside>
+      </div>
+
+      <div class="container-2">
+         <header class="header">
+            <img class="header-logo" id="logo-mobile" src="../../assets/icons/logo-mobile.svg"
+               alt="Logo do app Technical Share: um foguete laranja com escrita em azul escuro">
+         </header>
+
+         <main>
+            <form class="form-profile">
+
+               <div class="form-profile-image"></div>
+
+               <a id="change-photo" href="#">Alterar foto</a>
+
+               <div class="open-button font18" id="profile-informations">
+                  <h2>Informações do perfil</h2>
                </div>
-            </div>
-   
-   
-            <div class="label-input column-3">
-               <label class="form-profile-label social-media-title font14" for="">Redes sociais</label>
 
-               <input type="url" name="userLinkedin" id="userLinkedin">
-               <input type="url" name="userMedium" id="userMedium">
-               <input type="url" name="userBehance" id="userBehance">
-               <input type="url" name="userGithub" id="userGithub">
-               <input type="url" name="userTwitter" id="userTwitter">
-            </div>
-         </div>
+               <div class="main-grid">
 
-            <button class="font16 save-button" type="submit">Salvar alterações</button>
+                  <div class="column-1">
+                     <div class="label-input">
+                        <label class="form-profile-label font14" for="name">Nome</label>
+                        <input type="text" id="name" placeholder="Cristina Martins" required>
+                     </div>
 
-      </form>
+                     <div class="label-input">
+                        <label class="form-profile-label font14" for="email">Email</label>
+                        <input type="email" id="email" placeholder="cristinamartins@fcamara.com" required>
+                     </div>
 
-      <div class="open-button font18" id="interests">
-         <h2>Interesses</h2>
-      </div>
+                     <div class="label-input">
+                        <label class="form-profile-label font14" for="education">Formação</label>
+                        <input type="text" id="education">
+                        <input type="text" id="education">
+                     </div>
+                  </div>
 
-      <div class="interests-opened">
-         <ul>
-               <li class="opened-topic">Design Thinking</li>
-               <li class="opened-topic">Figma</li>
-               <li class="opened-topic">Adobe XD</li>
-               <li class="opened-topic">Sketch</li>
-         </ul>
-      </div>
-      
-      <div class="button-plus">
-         <img class="add-icon" src="../../assets/icons/add-icon.svg" alt="">
-         <h4>Clique para adicionar mais interesses</h4>
-      </div>
+                  <div class="column-2">
+                     <div class="label-input double-input">
+                        <div>
+                           <label class="form-profile-label font14" for="job-role">Cargo</label>
+                           <input type="text" id="job-role" placeholder="UX Designer" required>
+                        </div>
 
-      <div class="open-button font18" id="mentor-panel">
-         <h2>Painel do mentor</h2>
-                     
-      </div>
+                        <div>
+                           <label class="form-profile-label font14" for="seniority">Senioridade</label>
+                           <input type="text" id="seniority" placeholder="Junior" required>
+                        </div>
+                     </div>
 
-      <div class="mentor-panel-opened">
-         <h3 class="font16 habilities-title">Habilidades</h3>
-         <ul>
-               <li class="opened-topic hability">Product Discovery</li>
-               <li class="opened-topic hability">Product Discovery</li>
-               <li class="opened-topic hability">Product Discovery</li>
-               <li class="opened-topic hability">Product Discovery</li>
-               <li class="opened-topic hability">Product Discovery</li>
-         </ul>
-         <div class="button-plus">
-            <img class="add-icon" src="../../assets/icons/add-icon.svg" alt="">
-            <h4>Clique para adicionar mais habilidades</h4>
-         </div>
+                     <div class="label-input">
+                        <label class="form-profile-label font14" for="about">Sobre mim</label>
+                        <input id="about"
+                           placeholder="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.">
+                     </div>
+                  </div>
 
-         <div class="calendar">
-            CALENDÁRIO
-         </div>
 
-         <div class="planning-warning">
-            <h4 class="planning-warning-title font16">Planejamento de mentorias</h4>
-            <p class="planning-warning-description font14">O painel acima mostra as datas e horários que você já adicionou ao seu perfil e ainda não foram marcadas por nenhum mentorado</p>
-         </div>
+                  <div class="label-input column-3">
+                     <label class="form-profile-label social-media-title font14" for="">Redes sociais</label>
 
-         <h2 id="schedule-title" class="font18">Adicione mais horários a sua agenda</h2>
-         <h4 id="schedule-title-description" class="font18">Selecione a data e a hora</h4>
+                     <input type="url" name="userLinkedin" id="userLinkedin">
+                     <input type="url" name="userMedium" id="userMedium">
+                     <input type="url" name="userBehance" id="userBehance">
+                     <input type="url" name="userGithub" id="userGithub">
+                     <input type="url" name="userTwitter" id="userTwitter">
+                  </div>
+               </div>
 
-         <div class="schedule-date-hour">
-            <div class="schedule-date">
-               <label for="date-input" class="font14">Data</label>
-               <input type="date" name="date-input" id="date-input">
-            </div>
-            <div class="schedule-time">
-               <label for="time-input" class="font14">Hora</label>
-               <input type="time" name="time-input" id="time-input">
-            </div>
-         </div>
+               <button class="font16 save-button" type="submit">Salvar alterações</button>
 
-         <div class="platforms">
-            <h3 class="font18">Selecione a plataforma</h3>
-            <div class="mentor-platforms">
-               <img src="../../assets/icons/microsoft-icon.svg" alt="">
-               <img src="../../assets/icons/discord-icon.svg" alt="">
-               <img src="../../assets/icons/whatsapp-icon.svg" alt="">
+            </form>
+
+            <div class="open-button font18" id="interests">
+               <h2>Interesses</h2>
             </div>
 
-             <button id="confirm-button" class="font18" type="submit">Confirmar disponibilidade</button>
-         </div>
+            <div class="interests-opened">
+               <ul>
+                  <li class="opened-topic">Design Thinking</li>
+                  <li class="opened-topic">Figma</li>
+                  <li class="opened-topic">Adobe XD</li>
+                  <li class="opened-topic">Sketch</li>
+               </ul>
+            </div>
 
+            <div class="button-plus">
+               <img class="add-icon" src="../../assets/icons/add-icon.svg" alt="">
+               <h4>Clique para adicionar mais interesses</h4>
+            </div>
+
+            <div class="open-button font18" id="mentor-panel">
+               <h2>Painel do mentor</h2>
+
+            </div>
+
+            <div class="mentor-panel-opened">
+               <h3 class="font16 habilities-title">Habilidades</h3>
+               <ul>
+                  <li class="opened-topic hability">Product Discovery</li>
+                  <li class="opened-topic hability">Product Discovery</li>
+                  <li class="opened-topic hability">Product Discovery</li>
+                  <li class="opened-topic hability">Product Discovery</li>
+                  <li class="opened-topic hability">Product Discovery</li>
+               </ul>
+               <div class="button-plus">
+                  <img class="add-icon" src="../../assets/icons/add-icon.svg" alt="">
+                  <h4>Clique para adicionar mais habilidades</h4>
+               </div>
+
+               <div class="calendar">
+                  CALENDÁRIO
+               </div>
+
+               <div class="planning-warning">
+                  <h4 class="planning-warning-title font16">Planejamento de mentorias</h4>
+                  <p class="planning-warning-description font14">O painel acima mostra as datas e horários que você já
+                     adicionou ao seu perfil e ainda não foram marcadas por nenhum mentorado</p>
+               </div>
+
+               <h2 id="schedule-title" class="font18">Adicione mais horários a sua agenda</h2>
+               <h4 id="schedule-title-description" class="font18">Selecione a data e a hora</h4>
+
+               <div class="schedule-date-hour">
+                  <div class="schedule-date">
+                     <label for="date-input" class="font14">Data</label>
+                     <input type="date" name="date-input" id="date-input">
+                  </div>
+                  <div class="schedule-time">
+                     <label for="time-input" class="font14">Hora</label>
+                     <input type="time" name="time-input" id="time-input">
+                  </div>
+               </div>
+
+               <div class="platforms">
+                  <h3 class="font18">Selecione a plataforma</h3>
+                  <div class="mentor-platforms">
+                     <img src="../../assets/icons/microsoft-icon.svg" alt="">
+                     <img src="../../assets/icons/discord-icon.svg" alt="">
+                     <img src="../../assets/icons/whatsapp-icon.svg" alt="">
+                  </div>
+
+                  <button id="confirm-button" class="font18" type="submit">Confirmar disponibilidade</button>
+               </div>
+
+            </div>
+
+         </main>
+
+         <footer class="footer">
+            <a href="#" id="top-page">Ir para o topo da página</a>
+         </footer>
       </div>
 
-   </main>
+   </div>
 
-   <footer class="footer">
-      <a href="#" id="top-page">Ir para o topo da página</a>
-   </footer>
+
+   <!-- ASIDE MENU -->
+
+
+
+   <script src="./scripts/aside.js"></script>
 </body>
+
 </html>
