@@ -108,17 +108,24 @@
   border-radius: 50%;
 }
 
-.date-hour {
+/* .date-hour {
   display: flex;
   align-items: center;
   height: auto;
   width: auto;
   display: inline-flex;
-}
+} */
 
 #date, #hour {
   margin: 0.4rem 3rem 0.8rem 3rem;
   font-size: 14px;
+}
+
+.date-hour {
+  display: grid;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
 }
 
 .cancel-send-buttons {
@@ -259,10 +266,16 @@
   }
 
   .date-hour {
-    display: inline-flex;
-    justify-content: center;
+    display: grid;
   
     height: auto;
+    width: auto;
+  }
+
+  .date-time-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   /*Buttons*/
