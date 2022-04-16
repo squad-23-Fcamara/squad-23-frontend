@@ -50,7 +50,7 @@ header {
   }
 }
 .form-profile-image {
-  background-image: url(../../assets/img/profile.jfif);
+  background-image: url("../../assets/img/perfil mulher.jpg");
   background-size: cover;
   background-position: center;
   width: 50%;
@@ -129,6 +129,11 @@ header {
   padding-top: 0.9rem;
   padding-bottom: 0.9rem;
   padding-left: 1.6rem;
+}
+@media (min-width: 920px) {
+  .open-button {
+    text-align: center;
+  }
 }
 
 .interests-opened {
@@ -293,6 +298,10 @@ header {
 }
 .footer #top-page {
   color: white;
+}
+
+button::hover {
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=edit-profile.css.map */

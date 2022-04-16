@@ -44,7 +44,7 @@ header
       background-color: white
 
    &-image 
-      background-image: url(../../assets/img/profile.jfif)
+      background-image: url("../../assets/img/perfil mulher.jpg")
       background-size: cover
       background-position: center  
       width: 50%
@@ -120,6 +120,10 @@ header
    padding-top: .9rem 
    padding-bottom: .9rem
    padding-left: 1.6rem
+
+   @include responsive-mixin.desktop
+      text-align: center
+
 
 #mentor-panel
    //margin-bottom: 10rem
@@ -276,3 +280,5 @@ header
    #top-page
       color: white
 
+button::hover
+   cursor: pointer
