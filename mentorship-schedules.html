@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--Fonts-->
+
+  <!--Styles-->
+  <link rel="stylesheet" type="text/css" href="../styles/css/mentorship-schedules.css"/>
+  <link rel="stylesheet" type="text/css" href="../styles/css/style-aside.css"/>
+  <link rel="stylesheet" type="text/css" href="../styles/css/style-index.css"/>
+
+  <!--Calendar-->
+  <link rel="stylesheet" type="text/css" href="../styles/css/calendar/evo-calendar.midnight-blue.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../styles/css/calendar/evo-calendar.min.css"/>
+
+
+  <title></title>
+</head>
+
+<body>
+ 
+<section class="body-main">
+
+    <!-- ASIDE MENU -->
+
+    <aside id="menu">
+            
+      <!-- BUTTON USED ON MOBILE -->
+  <div class="navBtn" id="Btn"></div>
+
+  <div class="nav-menu">  
+      <!-- PROFILE USER -->
+      <div class="profile">
+          <div class="profile-image">
+              <img src="./assets/img/perfil mulher.jpg" alt="">
+          </div>
+
+          <div class="profile-info">
+              <h3>Cristina Martins</h3>
+          </div>
+      </div>
+
+      <!-- NAV -->
+      <nav class="nav">
+
+          <!-- MENU ITEMS -->
+      <div class="nav-item">
+          <a href="http://127.0.0.1:5500/index.html">
+            <img src="./assets/icons/home-page-icon.svg" alt="">
+              <h4>Página Inicial</h4> 
+          </a>
+      </div> 
+
+      <div class="nav-item">            
+          <a href="#">
+            <img src="./assets/icons/schedule-icon.svg" alt="">  
+              <h4>Meus agendamentos</h4> 
+          </a>
+      </div>
+
+      <div class="nav-item">            
+          <a href="http://127.0.0.1:5500/edit-profile.html">
+            <img src="./assets/icons/profile-icon.svg" alt="">
+              <h4>Perfil</h4> 
+          </a>
+      </div>
+
+      <div class="nav-item" id="nav-item-out-line">            
+          <a href="#">
+            <img src="./assets/icons/out-line-icon.svg" alt=""> 
+          </a>
+      </div>
+  </div>
+
+  </nav>
+  
+</aside>
+ 
+  <div class="title">
+    <h2 class="mentorship-schedule-title font28">Meus agendamentos</h2>
+  </div>
+  
+  <main class="container-main">
+    <div class="main-first-larger-square">
+      <div class="first-square-appointment">
+
+        <section class="appointment-list-title-legend">
+          <h2 class="scheduled-mentorships font26">Mentorias marcadas</h2>
+          <div class="legends">
+
+            <div class="content-legend">
+              <figure class="circle"></figure>
+              <figcaption>Mentor</figcaption>
+            </div>
+
+            <div class="content-legend">
+              <figure class="circle"></figure>
+              <figcaption>Mentorado</figcaption>
+            </div>
+
+          </div>
+        </section>
+
+        <section class="appointment-content-list">
+            <article id="user-info" class="appointment-list-mentor-photo">
+              <img class="mentor-photo" src="../assets/img/perfil mulher.jpg"></img>
+<!--               <div>
+                <h2>Guilherme Lima</h2>
+                <h4>Desenvolvedor Sênior</h4>
+              </div> -->
+            </article>
+          
+            <article id="mentorings" class="date-hour">
+              <!-- <div id="date">Data: 20/04/2022</div> -->
+              <!-- <div id="hour">Hora: 09h às 10h</div> -->
+<!--               <div class="cancel-send-buttons">
+                <button id="cancel-button">Cancelar mentoria</button>
+                <button id="send-button">Enviar mensagem</button>
+              </div> -->
+            </article>
+          
+
+        </section>
+      </div>
+
+      <section class="second-square-info-calend">
+        <article class="information">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia odio nam voluptatibus cum sit, placeat maiores debitis facilis rerum veritatis necessitatibus molestias doloremque velit, ratione officia voluptatum adipisci corporis error?</p>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati dolores suscipit, architecto sequi odio ad adipisci ex exercitationem a itaque blanditiis enim, saepe at nesciunt rerum ullam. Debitis, beatae atque!</p>
+        </article>
+
+        <article class="calendar-main">
+          <div id="calendar"></div>
+        </article>
+
+      </section>
+    </div>
+  </main>
+</section>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="../scripts/get-user-info.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/evo-calendar@1.1.2/evo-calendar/js/evo-calendar.min.js"></script>
+
+<script src="../scripts/calendar/evo-calendar.min.js"></script>
+<script src="../scripts/calendar/initialized-calendar.js"></script>
+<script src="../scripts/calendar/calendar-event.js"></script>
+
+</body>
+</html>
