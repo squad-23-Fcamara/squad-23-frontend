@@ -101,9 +101,10 @@ function createDateInputs(date) {
     timeZone: 'UTC'
   }).format(new Date(date))
   label.htmlFor = date
-
-  form.appendChild(radio)
-  form.appendChild(label)
+  const div = document.createElement('div')
+  div.appendChild(radio)
+  div.appendChild(label)
+  form.appendChild(div)
 
   radio.onclick = e => (selectedDate = e.target.value)
 }
