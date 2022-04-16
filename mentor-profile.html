@@ -26,12 +26,64 @@
   <body>
     <main class="main mobile-center">
       <header class="main-header">
-        <img
-          class="cover-image"
+        <img Class="cover-image"
           src="https://blog.prepara.me/wp-content/uploads/2021/06/Capas-LinkedIn-8-1024x266.png"
           alt="Foto de capa do mentor"
         />
       </header>
+                <!-- ASIDE -->
+      <aside id="menu">
+            
+        <!-- BUTTON USED ON MOBILE -->
+    <div class="navBtn" id="Btn"></div>
+
+    <div class="nav-menu">  
+        <!-- PROFILE USER -->
+        <div class="profile">
+            <div class="profile-image">
+                <img src="./assets/img/perfil mulher.jpg" alt="">
+            </div>
+
+            <div class="profile-info">
+                <h3>Cristina Martins</h3>
+            </div>
+        </div>
+
+        <!-- NAV -->
+        <nav class="nav">
+
+            <!-- MENU ITEMS -->
+        <div class="nav-item">
+            <a href="#">
+              <img src="./assets/icons/home-page-icon.svg" alt="">
+                <h4>Página Inicial</h4> 
+            </a>
+        </div> 
+
+        <div class="nav-item">            
+            <a href="#">
+              <img src="./assets/icons/schedule-icon.svg" alt="">  
+                <h4>Meus agendamentos</h4> 
+            </a>
+        </div>
+
+        <div class="nav-item" id="nav-item-profile">            
+            <a href="#">
+              <img src="./assets/icons/profile-icon.svg" alt="">
+                <h4>Perfil</h4> 
+            </a>
+        </div>
+
+        <div class="nav-item" id="nav-item-out-line">            
+            <a href="#">
+              <img src="./assets/icons/out-line-icon.svg" alt=""> 
+            </a>
+        </div>
+    </div>
+
+    </nav>
+    
+      </aside>
 
       <section>
         <article>
@@ -81,17 +133,18 @@
             </ul> -->
           </div>
         </article>
+
         <article class="schedule">
           <span class="schedule-title+icon">
             <h2 class="schedule-title font18">Dia/Hora</h2>
             <i class="schedule-help-icon">i</i>
           </span>
 
-          <tr>
+          <!-- <tr>
             <h3 class="font16 schedule-month-year">Abril 2022</h3>
           </tr>
-
-          <div class="schedule-table">
+                
+           <div class="schedule-table">
             <table id="table" class="font16">
                <th>
                 <div class="schedule-day day-1">
@@ -114,50 +167,52 @@
 
               <div>
                 <tr>
-                  <!--new line-->
+               
                   <td class="schedule-time">08:00</td>
                   <td class="schedule-time">08:00</td>
                   <td class="schedule-time">08:00</td>
                 </tr>
                 <tr>
-                  <!--new line-->
+                
                   <td class="schedule-time">09:00</td>
                   <td class="schedule-time">09:00</td>
                   <td class="schedule-time">09:00</td>
                 </tr>
                 <tr>
-                  <!--new line-->
+                  
                   <td class="schedule-time">10:00</td>
                   <td class="schedule-time">10:00</td>
                   <td class="schedule-time">10:00</td>
                 </tr>
                 <tr>
-                  <!--new line-->
+                
                   <td class="schedule-time">11:00</td>
                   <td class="schedule-time">11:00</td>
                   <td class="schedule-time">11:00</td>
                 </tr>
               </div>
-            </table>
+            </table> -->
           </div>
           <div id="dates">
             <form id="schedule-form"></form>
-          </div>
-
+          </div> 
           <button id="btn" class="schedule-button font20">
             Agendar mentoria
           </button>
-          <div class="schedule-button-sucess font14">
+          <!-- <div class="schedule-button-sucess font14">
             Sua mentoria foi agendada com sucesso.
-          </div>
+          </div>-->
 
         </article>
       </section>
     </main>
+
+
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script
       type="text/javascript"
       src="./scripts/createMentorProfile.js"
     ></script>
+    <script src="./scripts/aside.js"></script>
   </body>
 </html>
